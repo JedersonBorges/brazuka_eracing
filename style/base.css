@@ -587,6 +587,13 @@ color: #ff3c3c;
 user-select: none;
 }
 
+.h2h-score-mobile {
+font-size: 14px;
+font-weight: 700;
+color: #ff3c3c;
+user-select: none;
+}
+
 .h2h-score .x {
 margin: 0 12px;
 font-weight: 900;
@@ -652,6 +659,7 @@ text-decoration: none;
 
 .container_1 {
 align-content: flex-start;
+
 }
 
 
@@ -672,3 +680,15 @@ align-content: flex-start;
     display: block;
   }
 }
+
+
+/*****************************/
+/*mobile table */
+
+.mobile-table {
+  padding-top: 100px;
+}
+
+
+
+
