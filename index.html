@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 Virtual League</title>
+  <link rel="stylesheet" href="style/base.css">
+  <style>
+
+    body {
+      background-color: #0e0000;
+      color: #fff;
+    }
+
+      .flag {
+      width: 40px;
+      height: 25px;
+      margin: 10px 0;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagens/bzk_white_logo.png" alt="F1 Esports Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Calendar</a>
+
+      <span class="dropdown">
+        <a href="#">Standings</a>
+        <span class="dropdown-content">
+          <a href="season_8_standings_f1.html">Formula 1</a>
+          <a href="season_8_standings_f2.html">Formula 2</a>
+        </span>
+      </span>
+
+      <span class="dropdown">
+        <a href="#">Drivers</a>
+        <span class="dropdown-content">
+          <a href="season_8_drivers_f1.html">Formula 1</a>
+          <a href="season_8_drivers_f2.html">Formula 2</a>
+        </span>
+      </span>
+      <span class="dropdown">
+      <a href="#">Head to head</a>
+        <span class="dropdown-content">
+          <a href="season_8_h2h_f1.html">Formula 1</a>
+          <a href="season_8_h2h_f2.html">Formula 2</a>
+        </span>
+      </span>
+            <span class="dropdown">
+      <a href="#">Past Seasons</a>
+        <span class="dropdown-content">
+          <a href="season_7_standings_f1.html">Season 7</a>
+        </span>
+      </span>
+      
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Brazuka World Championship</h1>
+  </section>
+
+<!-- ... Tudo acima permanece igual -->
+
+<section class="calendar-container">
+  <h2>CALENDAR</h2>
+  <div class="carousel-wrapper">
+    <button class="arrow left" onclick="scrollCarousel(-1)">&#9664;</button>
+    
+    <div class="carousel" id="carousel">
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">1</div>
+        <img class="flag" src="https://flagcdn.com/w40/au.png" alt="">
+        <div class="location">AUSTRALIA</div>
+        <div class="time"> <img style="width: 50px;" src="logos/f1.png" alt="">🏆 Andresito</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Antonino</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">2</div>
+        <img class="flag" src="https://flagcdn.com/w40/cn.png" alt="">
+        <div class="location">CHINA</div>
+        <div class="time"> <img style="width: 50px;" src="logos/f1.png" alt="">🏆 Gunner</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Thiago</div>
+        
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">3</div>
+        <img class="flag" src="https://flagcdn.com/w40/jp.png" alt="">
+        <div class="location">JAPAN</div>
+        <div class="time"> <img style="width: 50px;" src="logos/f1.png" alt="">🏆 Gunner</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Antonino</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">4</div>
+        <img class="flag" src="https://flagcdn.com/w40/be.png" alt="">
+        <div class="location">BELGIUM</div>
+        <div class="time"> <img style="width: 50px;" src="logos/f1.png" alt="">🏆 Gunner</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Teodoro</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">5</div>
+        <img class="flag" src="https://flagcdn.com/w40/hu.png" alt="">
+        <div class="location">HUNGARY</div>
+        <div class="time"> <img style="width: 50px;" src="logos/f1.png" alt="">🏆 Gunner</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Verdugo</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">6</div>
+        <img class="flag" src="https://flagcdn.com/w40/bh.png" alt="">
+        <div class="location">BAHREIN</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 09/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt="">🏆 Antonino</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">7</div>
+        <img class="flag" src="https://flagcdn.com/w40/sa.png" alt="">
+        <div class="location">JEDDAH</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 16/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 14/08</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">8</div>
+        <img class="flag" src="https://flagcdn.com/w40/us.png" alt="USA">
+        <div class="location">MIAMI</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 23/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 21/08</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">9</div>
+        <img class="flag" src="https://flagcdn.com/w40/nl.png" alt="">
+        <div class="location">NETHERLANDS</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 29/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 27/08</div>
+      </div>
+        <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">10</div>
+        <img class="flag" src="https://flagcdn.com/w40/it.png" alt="">
+        <div class="location">MONZA</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 06/09</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 04/09</div>
+      </div>
+        <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">11</div>
+        <img class="flag" src="https://flagcdn.com/w40/it.png" alt="">
+        <div class="location">IMOLA</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 13/09</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 11/09</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">12</div>
+        <img class="flag" src="https://flagcdn.com/w40/az.png" alt="">
+        <div class="location">ARZEBAIJAN</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 20/09</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 18/09</div>
+      </div>
+            <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">13</div>
+        <img class="flag" src="https://flagcdn.com/w40/mc.png" alt="">
+        <div class="location">MONACO</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 16/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 14/08</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">14</div>
+        <img class="flag" src="https://flagcdn.com/w40/sg.png" alt="">
+        <div class="location">SINGAPORE</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 16/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 14/08</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">14</div>
+        <img class="flag" src="https://flagcdn.com/w40/es.png" alt="">
+        <div class="location">SPAIN</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 11/10</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 14/08</div>
+      </div>
+      <div class="calendar-card">
+        <div class="round">ROUND</div>
+        <div class="round-number">14</div>
+        <img class="flag" src="https://flagcdn.com/w40/sg.png" alt="">
+        <div class="location">SINGAPORE</div>
+        <div class="time"><img style="width: 50px;" src="logos/f1.png" alt=""> 16/08</div>
+        <div class="time"> <img style="width: 50px; margin-bottom: -8px;" src="logos/f2-white.png" alt=""> 14/08</div>
+      </div>
+      
+    </div>
+
+    <button class="arrow right" onclick="scrollCarousel(1)">&#9654;</button>
+  </div>
+</section>
+
+<script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const scrollAmount = 220;
+    carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+</script>
+
+
+
+  <footer>
+    © 2025 F1 Virtual League. All rights reserved.
+  </footer>
+
+</body>
+</html>

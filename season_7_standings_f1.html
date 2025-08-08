@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 Racing League</title>
+  <link rel="stylesheet" href="style/base.css">
+
+</head>
+<body>
+
+
+
+<!-------------------------------------------------------------------------------------------->
+<!-----------------------------------HEADER PADRÃO-------------------------------------------->
+  <header>
+    <img src="imagens/bzk_white_logo.png" alt="F1 Esports Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Calendar</a>
+
+      <span class="dropdown">
+        <a href="#">Standings</a>
+        <span class="dropdown-content">
+          <a href="season_8_standings_f1.html">Formula 1</a>
+          <a href="season_8_standings_f2.html">Formula 2</a>
+        </span>
+      </span>
+
+      <span class="dropdown">
+        <a href="#">Drivers</a>
+        <span class="dropdown-content">
+          <a href="season_8_drivers_f1.html">Formula 1</a>
+          <a href="season_8_drivers_f2.html">Formula 2</a>
+        </span>
+      </span>
+      <span class="dropdown">
+      <a href="#">Head to head</a>
+        <span class="dropdown-content">
+          <a href="season_8_h2h_f1.html">Formula 1</a>
+          <a href="season_8_h2h_f2.html">Formula 2</a>
+        </span>
+      </span>
+            <span class="dropdown">
+      <a href="#">Past Seasons</a>
+        <span class="dropdown-content">
+          <a href="season_7_standings_f1.html">Season 7</a>
+        </span>
+      </span>
+      
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!--------------------------------------------------------------------------------->
+
+  <!--------------------------------------------------------------------------------->
+
+
+  <h2> <img style="width: 150px; margin-bottom: -5px;" src="logos/f1.png"/> World Championship - Season 7</h2>
+  <h3></h3>
+
+<div class="switch-container">
+    <span id="tabDrivers" class="active">Drivers</span>
+    <span id="tabConstructors">Constructors</span>
+</div>
+
+  <table id="wikipediaStyleTable" >
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+      <tfoot>
+     <tr>
+      <td colspan="34" style="padding: 8px; border-top: 2px solid #999; background-color: #f0f0f0; font-size: 13px; color: #333;">
+        <span style="margin-left:12px;"><sup style="font-size: 60%; font-weight: bold;">P</sup> Pole Position</span>
+        <span style="margin-left:12px;"><sup style="font-size: 60%; font-weight: bold;">F</sup> Fastest Lap</span>
+        <span style="margin-left:12px;"><sup style="font-size: 60%; font-weight: bold;">D</sup> Driver of the Day</span>
+        <span style="margin-left:12px;"><sup style="font-size: 60%; font-weight: bold;">C</sup> Cleanest Driver</span>
+      </td>
+    </tr>
+  </tfoot>
+  </table>
+
+  
+
+  <table id="tabelaEquipes" class="tabela-wikipedia">
+  <thead></thead>
+  <tbody></tbody>
+</table>
+
+
+  
+
+<script src="scripts/script_f1_bzk_season7.js"></script>
+</body>
+</html>
