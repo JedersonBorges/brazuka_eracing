@@ -260,6 +260,7 @@ color: #0d0d0d;
 
 thead {
 background-color: black;
+border: 1px solid #414141;
 }
 
 th, td {
