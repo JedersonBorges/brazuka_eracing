@@ -1,1 +1,905 @@
-const _0x494745=_0x622a;(function(_0x33f7a4,_0x4be6e9){const _0x52f12e=_0x622a,_0x110993=_0x33f7a4();while(!![]){try{const _0x2eb6a8=parseInt(_0x52f12e(0x242))/0x1+parseInt(_0x52f12e(0x1b0))/0x2+-parseInt(_0x52f12e(0x23f))/0x3*(parseInt(_0x52f12e(0x248))/0x4)+-parseInt(_0x52f12e(0x1a1))/0x5*(-parseInt(_0x52f12e(0x18c))/0x6)+-parseInt(_0x52f12e(0x229))/0x7+-parseInt(_0x52f12e(0x1fe))/0x8+parseInt(_0x52f12e(0x228))/0x9;if(_0x2eb6a8===_0x4be6e9)break;else _0x110993['push'](_0x110993['shift']());}catch(_0x3beb13){_0x110993['push'](_0x110993['shift']());}}}(_0x80f4,0x2338d));const pilotosURL=_0x494745(0x1e6),etapasURL='db/BZK\x20F1\x20Com\x20pontuacao\x20Final\x20-\x20Etapas.csv',pontuacaoURL=_0x494745(0x234);async function carregarCSV(_0x413886){const _0x18adcb=_0x494745,_0x1361a1=await fetch(_0x413886),_0x3a07d0=await _0x1361a1[_0x18adcb(0x249)]();return _0x3a07d0[_0x18adcb(0x1c9)]()[_0x18adcb(0x1ec)]('\x0a')['map'](_0x255c4f=>_0x255c4f[_0x18adcb(0x1ec)](','));}function normalizarId(_0x3cf6e2){const _0x26dab5=_0x494745;return _0x3cf6e2?.[_0x26dab5(0x23a)]()[_0x26dab5(0x1a3)](/\s/g,'');}async function montarCardsPilotos(){const _0x5d600d=_0x494745,_0x17a0f8=await carregarCSV(pilotosURL),_0x43b0ad=_0x17a0f8[0x0],_0x19a472=document[_0x5d600d(0x18e)](_0x5d600d(0x1d2));if(!_0x19a472)return;_0x19a472['innerHTML']='';for(let _0x13a018=0x1;_0x13a018<_0x17a0f8[_0x5d600d(0x21a)];_0x13a018++){const _0x2b5a69=_0x17a0f8[_0x13a018],_0x3758b3={};_0x43b0ad['forEach']((_0x4e4800,_0x3709ac)=>_0x3758b3[_0x4e4800[_0x5d600d(0x1c9)]()[_0x5d600d(0x23a)]()]=_0x2b5a69[_0x3709ac]?.['trim']());if(!_0x3758b3['equipe']||_0x3758b3['equipe']===''||_0x3758b3[_0x5d600d(0x1b8)]==_0x5d600d(0x246)||_0x3758b3['piloto']==_0x5d600d(0x1f1))continue;const _0x5525d3=document[_0x5d600d(0x1e2)](_0x5d600d(0x1bd));_0x5525d3[_0x5d600d(0x1c6)]=_0x5d600d(0x1de),_0x5525d3[_0x5d600d(0x232)]=_0x5d600d(0x196)+_0x3758b3[_0x5d600d(0x1cb)]+_0x5d600d(0x245)+_0x3758b3[_0x5d600d(0x1cb)]+_0x5d600d(0x240)+_0x3758b3['display']+_0x5d600d(0x1a5)+_0x3758b3['teamcolor']+_0x5d600d(0x1fa)+_0x3758b3[_0x5d600d(0x19a)]+_0x5d600d(0x219)+_0x3758b3['equipe']+_0x5d600d(0x245)+_0x3758b3[_0x5d600d(0x19b)]+_0x5d600d(0x18d)+(_0x3758b3['entries']||0x0)+_0x5d600d(0x22a)+(_0x3758b3['best']||0x0)+_0x5d600d(0x21d)+(_0x3758b3[_0x5d600d(0x1fc)]||0x0)+_0x5d600d(0x1e7)+(_0x3758b3[_0x5d600d(0x205)]||0x0)+_0x5d600d(0x231)+(_0x3758b3[_0x5d600d(0x236)]||0x0)+_0x5d600d(0x22e)+(_0x3758b3[_0x5d600d(0x22f)]||0x0)+'</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Top\x2010:</strong>\x20'+(_0x3758b3['top\x2010']||0x0)+_0x5d600d(0x1ef)+(_0x3758b3[_0x5d600d(0x1f3)]||0x0)+'</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Fastest\x20Laps:</strong>\x20'+(_0x3758b3['fl']||0x0)+_0x5d600d(0x19f)+(_0x3758b3[_0x5d600d(0x17e)]||0x0)+_0x5d600d(0x224)+(_0x3758b3['cd']||0x0)+_0x5d600d(0x206),_0x19a472['appendChild'](_0x5525d3);}}montarCardsPilotos();async function montarTabelaWikipedia(){const _0x13a55e=_0x494745,_0x27f44c=await carregarCSV(pilotosURL),_0x55d811=await carregarCSV(etapasURL),_0x69df9=_0x27f44c[0x0],_0x1d46af=_0x55d811[0x0],_0x3763b4=_0x1d46af['length']-0x1,_0x1f1365={};for(let _0x2e2473=0x1;_0x2e2473<_0x27f44c[_0x13a55e(0x21a)];_0x2e2473++){const _0x4dc0c1=_0x27f44c[_0x2e2473],_0xa37375={};_0x69df9[_0x13a55e(0x1d9)]((_0x3224a5,_0x3db108)=>_0xa37375[_0x3224a5?.['trim']()[_0x13a55e(0x23a)]()]=_0x4dc0c1[_0x3db108]?.[_0x13a55e(0x1c9)]()),_0xa37375[_0x13a55e(0x205)]=parseInt(_0xa37375[_0x13a55e(0x205)]||0x0);const _0x21f8c3=(_0xa37375[_0x13a55e(0x1b8)]??_0xa37375['\ufeffpiloto']??_0x4dc0c1[0x0])?.['trim']();_0xa37375[_0x13a55e(0x1b8)]=_0x21f8c3;const _0x1498b0=normalizarId(_0x21f8c3);_0x1f1365[_0x1498b0]=_0xa37375;}const _0x21b2c4={};for(let _0x130096=0x2;_0x130096<=0x3d;_0x130096++){const _0x1529a6=_0x55d811[_0x130096];if(!_0x1529a6)continue;for(let _0x58dea1=0x1;_0x58dea1<_0x1529a6['length'];_0x58dea1++){const _0x4759d7=normalizarId(_0x1529a6[_0x58dea1]);if(!_0x4759d7)continue;if(!_0x21b2c4[_0x4759d7])_0x21b2c4[_0x4759d7]=[];_0x21b2c4[_0x4759d7][_0x58dea1-0x1]=_0x130096-0x1;}}const _0x15f16a={},_0x4905ff={0x47:'F',0x48:'P',0x49:'D',0x4a:'C'};for(let _0x4ca413 in _0x4905ff){const _0x25a7f1=_0x55d811[+_0x4ca413];if(!_0x25a7f1)continue;for(let _0x5bf9d4=0x1;_0x5bf9d4<_0x25a7f1[_0x13a55e(0x21a)];_0x5bf9d4++){const _0x45063f=normalizarId(_0x25a7f1[_0x5bf9d4]);if(!_0x45063f)continue;if(!_0x15f16a[_0x45063f])_0x15f16a[_0x45063f]={};if(!_0x15f16a[_0x45063f][_0x5bf9d4-0x1])_0x15f16a[_0x45063f][_0x5bf9d4-0x1]=[];_0x15f16a[_0x45063f][_0x5bf9d4-0x1]['push'](_0x4905ff[_0x4ca413]);}}const _0x41cfd1=Object[_0x13a55e(0x1f2)](_0x1f1365)[_0x13a55e(0x207)](_0x59b5bf=>_0x21b2c4[normalizarId(_0x59b5bf['piloto'])])[_0x13a55e(0x1e1)]((_0x323435,_0x24066f)=>_0x24066f[_0x13a55e(0x205)]-_0x323435[_0x13a55e(0x205)]),_0x5adee5=document[_0x13a55e(0x200)](_0x13a55e(0x221)),_0x366649=_0x5adee5[_0x13a55e(0x200)](_0x13a55e(0x217)),_0x2c3ebb=_0x5adee5[_0x13a55e(0x200)]('tbody');_0x366649[_0x13a55e(0x232)]=_0x13a55e(0x211)+[...Array(_0x3763b4)][_0x13a55e(0x1a9)]((_0x164f92,_0x28d9b2)=>{const _0x1bb3a3=_0x13a55e,_0x2a6f2c=_0x55d811[0x1][_0x28d9b2+0x1]?.[_0x1bb3a3(0x23a)]()||'';return'<th><img\x20class=\x22flag\x22\x20src=\x22https://flagcdn.com/w40/'+_0x2a6f2c+_0x1bb3a3(0x23d);})['join']('')+'\x0a\x20\x20</tr>\x0a',_0x2c3ebb[_0x13a55e(0x232)]='',_0x41cfd1[_0x13a55e(0x1d9)]((_0x27bdd1,_0x311994)=>{const _0x346423=_0x13a55e,_0x1d309f=normalizarId(_0x27bdd1[_0x346423(0x1b8)]),_0x373d93=document[_0x346423(0x1e2)]('tr');_0x373d93['innerHTML']='\x0a\x20\x20\x20\x20<td>'+(_0x311994+0x1)+_0x346423(0x1e9)+_0x27bdd1['country']+_0x346423(0x1f5)+_0x27bdd1[_0x346423(0x227)]+_0x346423(0x1ac)+_0x27bdd1[_0x346423(0x19a)]+_0x346423(0x212)+_0x27bdd1['equipe']+_0x346423(0x190)+_0x27bdd1[_0x346423(0x19b)]+_0x346423(0x1b4)+_0x27bdd1[_0x346423(0x205)]+_0x346423(0x1ba);for(let _0x43bca2=0x0;_0x43bca2<_0x3763b4;_0x43bca2++){const _0x170473=_0x21b2c4[_0x1d309f]?.[_0x43bca2],_0x4d5f1f=document[_0x346423(0x1e2)]('td');_0x4d5f1f[_0x346423(0x23b)][_0x346423(0x1a6)]=_0x346423(0x1fb);let _0x4d3251=_0x346423(0x20e),_0xeef391=_0x346423(0x1c5),_0x1e1f10='',_0x12efeb=_0x346423(0x1ed);if(typeof _0x170473===_0x346423(0x1b5)){if(_0x170473>=0x17&&_0x170473<=0x27)_0x1e1f10=_0x346423(0x1aa),_0x4d3251=_0x346423(0x1d1),_0x12efeb='9px';else{if(_0x170473>=0x28&&_0x170473<=0x2b)_0x1e1f10=_0x346423(0x1eb),_0xeef391=_0x346423(0x20e),_0x4d3251=_0x346423(0x1db),_0x12efeb=_0x346423(0x1ae);else{if(_0x170473>=0x2c&&_0x170473<=0x3c)_0x1e1f10=_0x346423(0x24c),_0x4d3251=_0x346423(0x1bf),_0x12efeb=_0x346423(0x1ae);else{_0x1e1f10=_0x170473[_0x346423(0x244)]();if(_0x170473===0x1)_0x4d3251=_0x346423(0x1b7);else{if(_0x170473===0x2)_0x4d3251='#c9c9c9ff';else{if(_0x170473===0x3)_0x4d3251=_0x346423(0x21f);else{if(_0x170473>=0x4&&_0x170473<=0xa)_0x4d3251=_0x346423(0x20a);else{if(_0x170473>=0xb&&_0x170473<=0x14)_0x4d3251=_0x346423(0x197);}}}}const _0x4696d6=0x46,_0x1fa89d=0x47,_0x5a9441=0x48,_0x457e32=0x49,_0x22f383=_0x55d811[_0x4696d6]?.[_0x43bca2+0x1]?.['trim'](),_0x1b2508=_0x55d811[_0x1fa89d]?.[_0x43bca2+0x1]?.['trim'](),_0x461100=_0x55d811[_0x5a9441]?.[_0x43bca2+0x1]?.[_0x346423(0x1c9)](),_0x218c37=_0x55d811[_0x457e32]?.[_0x43bca2+0x1]?.[_0x346423(0x1c9)]();let _0x5c0090='';if(normalizarId(_0x1b2508)===_0x1d309f)_0x5c0090+=_0x346423(0x213);if(normalizarId(_0x22f383)===_0x1d309f)_0x5c0090+=_0x346423(0x1b9);if(normalizarId(_0x461100)===_0x1d309f)_0x5c0090+=_0x346423(0x1b6);if(normalizarId(_0x218c37)===_0x1d309f)_0x5c0090+=_0x346423(0x21e);_0x1e1f10=''+_0x1e1f10+_0x5c0090;}}}}else _0x1e1f10='';_0x4d5f1f[_0x346423(0x232)]=_0x1e1f10,_0x4d5f1f['className']=_0x346423(0x1d4),_0x4d5f1f[_0x346423(0x20b)](_0x346423(0x23b),_0x346423(0x18b)+_0x4d3251+_0x346423(0x1c7)+_0xeef391+_0x346423(0x247)+_0x12efeb+';\x20'),_0x373d93['appendChild'](_0x4d5f1f);}_0x2c3ebb['appendChild'](_0x373d93);});}montarTabelaWikipedia();async function montarTabelaEquipes(){const _0x8dd98c=_0x494745,_0x5d89f1=await carregarCSV(pilotosURL),_0x3dd3c7=await carregarCSV(etapasURL),_0x24ad05=_0x5d89f1[0x0],_0xcc35ef=_0x3dd3c7[0x0],_0x5ee7fa=_0xcc35ef[_0x8dd98c(0x21a)]-0x1,_0x247410={};for(let _0x4ab196=0x1;_0x4ab196<_0x5d89f1[_0x8dd98c(0x21a)];_0x4ab196++){const _0x3d7299=_0x5d89f1[_0x4ab196],_0x7560e5={};_0x24ad05[_0x8dd98c(0x1d9)]((_0x2e0278,_0x210c8f)=>_0x7560e5[_0x2e0278?.[_0x8dd98c(0x1c9)]()['toLowerCase']()]=_0x3d7299[_0x210c8f]?.[_0x8dd98c(0x1c9)]()),_0x7560e5[_0x8dd98c(0x205)]=parseInt(_0x7560e5['points']||0x0);const _0x3a4496=(_0x7560e5[_0x8dd98c(0x1b8)]??_0x7560e5[_0x8dd98c(0x24a)]??_0x3d7299[0x0])?.['trim']();_0x7560e5[_0x8dd98c(0x1b8)]=_0x3a4496;const _0x120394=normalizarId(_0x3a4496);_0x247410[_0x120394]=_0x7560e5;}const _0x3a7862={};for(let _0x12e3aa in _0x247410){const _0x4e6af9=_0x247410[_0x12e3aa];if(!_0x4e6af9['equipe'])continue;if(_0x4e6af9[_0x8dd98c(0x19b)]['toLowerCase']()===_0x8dd98c(0x1b1))continue;!_0x3a7862[_0x4e6af9[_0x8dd98c(0x19b)]]&&(_0x3a7862[_0x4e6af9[_0x8dd98c(0x19b)]]={'pilotos':[],'totalPontos':0x0,'totalPoints':0x0,'teamcolor':_0x4e6af9['teamcolor'],'logo':_0x8dd98c(0x20f)+_0x4e6af9[_0x8dd98c(0x19b)]+_0x8dd98c(0x198),'resultados':Array(_0x5ee7fa)[_0x8dd98c(0x243)]([])}),_0x3a7862[_0x4e6af9['equipe']][_0x8dd98c(0x189)][_0x8dd98c(0x1f9)](_0x12e3aa),_0x3a7862[_0x4e6af9[_0x8dd98c(0x19b)]][_0x8dd98c(0x24b)]+=parseInt(_0x4e6af9[_0x8dd98c(0x186)]??_0x4e6af9[_0x8dd98c(0x205)]??0x0),_0x3a7862[_0x4e6af9[_0x8dd98c(0x19b)]]['totalPoints']+=parseInt(_0x4e6af9[_0x8dd98c(0x205)]??0x0);}const _0x3633b1={};for(let _0x3a0796=0x2;_0x3a0796<=0x3d;_0x3a0796++){const _0x482cd9=_0x3dd3c7[_0x3a0796];if(!_0x482cd9)continue;for(let _0x5bdc8a=0x1;_0x5bdc8a<_0x482cd9['length'];_0x5bdc8a++){const _0xfc337c=normalizarId(_0x482cd9[_0x5bdc8a]);if(!_0xfc337c)continue;if(!_0x3633b1[_0xfc337c])_0x3633b1[_0xfc337c]=[];if(_0x3a0796>=0x17&&_0x3a0796<=0x27)_0x3633b1[_0xfc337c][_0x5bdc8a-0x1]='DNF';else{if(_0x3a0796>=0x28&&_0x3a0796<=0x2b)_0x3633b1[_0xfc337c][_0x5bdc8a-0x1]='DSQ';else{if(_0x3a0796>=0x2c&&_0x3a0796<=0x3d)_0x3633b1[_0xfc337c][_0x5bdc8a-0x1]=_0x8dd98c(0x1e4);else _0x3633b1[_0xfc337c][_0x5bdc8a-0x1]=_0x3a0796-0x1;}}}}for(const _0x160e71 in _0x3a7862){const _0x9f78a2=_0x3a7862[_0x160e71];_0x9f78a2[_0x8dd98c(0x223)]=Array['from']({'length':_0x5ee7fa},(_0xff1a42,_0x217b1b)=>{const _0x5ccab8=_0x8dd98c,_0x4a4f19=_0x9f78a2[_0x5ccab8(0x189)]['map'](_0x9535e7=>_0x3633b1[_0x9535e7]?.[_0x217b1b]??'-');return _0x4a4f19;});}const _0x18b449=Object[_0x8dd98c(0x241)](_0x3a7862)['sort'](([,_0x4cae5c],[,_0x128e55])=>_0x128e55[_0x8dd98c(0x24b)]-_0x4cae5c[_0x8dd98c(0x24b)]),_0x4b6b4a=document[_0x8dd98c(0x200)](_0x8dd98c(0x1ea)),_0x4afae1=_0x4b6b4a['querySelector'](_0x8dd98c(0x19e)),_0x1c6a61=_0x4b6b4a[_0x8dd98c(0x200)](_0x8dd98c(0x1e3));_0x4afae1[_0x8dd98c(0x232)]=_0x8dd98c(0x1c0)+[...Array(_0x5ee7fa)][_0x8dd98c(0x1a9)]((_0x24ae3b,_0x4f89bf)=>{const _0x40fe81=_0x8dd98c,_0xd41f28=_0x3dd3c7[0x1][_0x4f89bf+0x1]?.[_0x40fe81(0x23a)]()||'';return _0x40fe81(0x1d0)+_0xd41f28+_0x40fe81(0x23d);})[_0x8dd98c(0x1a2)]('')+_0x8dd98c(0x1da),_0x1c6a61[_0x8dd98c(0x232)]='',_0x18b449[_0x8dd98c(0x1d9)](([_0x1d9781,_0x327175],_0x1677c4)=>{const _0x36f6f1=_0x8dd98c,_0x532e1b=_0x1677c4%0x2===0x0?_0x36f6f1(0x1d5):_0x36f6f1(0x233),[_0x3fc2bd,_0x32f8cf]=_0x327175['pilotos'],_0x2262c3=document[_0x36f6f1(0x1e2)]('tr'),_0x55c337=document[_0x36f6f1(0x1e2)]('tr'),_0x374c7d=document[_0x36f6f1(0x1e2)]('td');_0x374c7d[_0x36f6f1(0x1af)]=0x2,_0x374c7d[_0x36f6f1(0x1c6)]=_0x532e1b,_0x374c7d[_0x36f6f1(0x1f8)]=_0x1677c4+0x1;const _0x43ab43=document['createElement']('td');_0x43ab43[_0x36f6f1(0x1af)]=0x2,_0x43ab43[_0x36f6f1(0x1c6)]=_0x532e1b,_0x43ab43[_0x36f6f1(0x232)]='\x0a\x20\x20\x20\x20\x20\x20<img\x20src=\x22'+_0x327175[_0x36f6f1(0x1ad)]+_0x36f6f1(0x23e)+_0x327175['teamcolor']+_0x36f6f1(0x201)+_0x1d9781+_0x36f6f1(0x1ee);const _0x1c8284=document[_0x36f6f1(0x1e2)]('td');_0x1c8284[_0x36f6f1(0x1af)]=0x2,_0x1c8284['className']=_0x532e1b,_0x1c8284['innerHTML']='<strong>'+_0x327175[_0x36f6f1(0x1c3)]+_0x36f6f1(0x1e8);const _0x594ef6=document[_0x36f6f1(0x1e2)]('td');_0x594ef6['rowSpan']=0x2,_0x594ef6['className']=_0x532e1b,_0x594ef6['innerHTML']=_0x36f6f1(0x1cc)+_0x327175[_0x36f6f1(0x24b)]+'</strong>',_0x2262c3[_0x36f6f1(0x180)](_0x374c7d),_0x2262c3[_0x36f6f1(0x180)](_0x43ab43),_0x2262c3[_0x36f6f1(0x180)](_0x1c8284);const _0x58dc8a=_0x2f2a74=>{const _0x4fa00f=_0x36f6f1,_0x17335d=_0x3633b1[_0x2f2a74]||[];return[...Array(_0x5ee7fa)][_0x4fa00f(0x1a9)]((_0x1b44e7,_0x354226)=>{const _0x480944=_0x4fa00f,_0x5c66d0=_0x17335d[_0x354226],_0xea3c13=document['createElement']('td');_0xea3c13[_0x480944(0x23b)][_0x480944(0x1a6)]=_0x480944(0x1fb);let _0x31b9e8='-',_0x49a6d4='#ffffffff',_0x259324='#000000ff';if(_0x5c66d0==='DNF')_0x31b9e8=_0x480944(0x1aa),_0x49a6d4=_0x480944(0x1d1);else{if(_0x5c66d0===_0x480944(0x1e4))_0x31b9e8=_0x480944(0x24c),_0x49a6d4=_0x480944(0x20e);else{if(_0x5c66d0===_0x480944(0x1eb))_0x31b9e8=_0x480944(0x1eb),_0x49a6d4=_0x480944(0x1db),_0x259324=_0x480944(0x20e);else{if(typeof _0x5c66d0==='number'){_0x31b9e8=_0x5c66d0[_0x480944(0x244)]();if(_0x5c66d0===0x1)_0x49a6d4='#ffffbf';else{if(_0x5c66d0===0x2)_0x49a6d4=_0x480944(0x187);else{if(_0x5c66d0===0x3)_0x49a6d4='#ffdf9f';else{if(_0x5c66d0>=0x4&&_0x5c66d0<=0xa)_0x49a6d4=_0x480944(0x20a);else{if(_0x5c66d0>=0xb&&_0x5c66d0<=0x3c)_0x49a6d4=_0x480944(0x197);}}}}}}}}return _0xea3c13['innerText']=_0x31b9e8,_0xea3c13[_0x480944(0x20b)](_0x480944(0x23b),_0x480944(0x204)+_0x49a6d4+_0x480944(0x182)+_0x259324+_0x480944(0x225)),_0xea3c13;});},_0x4ccbde=_0x58dc8a(_0x3fc2bd),_0x5731de=_0x58dc8a(_0x32f8cf);_0x4ccbde[_0x36f6f1(0x1d9)](_0x5f1b8d=>_0x2262c3[_0x36f6f1(0x180)](_0x5f1b8d)),_0x5731de[_0x36f6f1(0x1d9)](_0x45134c=>_0x55c337[_0x36f6f1(0x180)](_0x45134c)),_0x1c6a61[_0x36f6f1(0x180)](_0x2262c3),_0x1c6a61[_0x36f6f1(0x180)](_0x55c337);});}montarTabelaEquipes();async function montarTabelaCompacta(){const _0x32230c=_0x494745,_0x7ea3e6=await carregarCSV(pilotosURL),_0x3844d8=_0x7ea3e6[0x0],_0x9b11b6={};for(let _0x4d412f=0x1;_0x4d412f<_0x7ea3e6[_0x32230c(0x21a)];_0x4d412f++){const _0x25e3f7=_0x7ea3e6[_0x4d412f],_0x3491f9={};_0x3844d8[_0x32230c(0x1d9)]((_0x42fc28,_0x3e1302)=>_0x3491f9[_0x42fc28?.[_0x32230c(0x1c9)]()[_0x32230c(0x23a)]()]=_0x25e3f7[_0x3e1302]?.[_0x32230c(0x1c9)]()),_0x3491f9[_0x32230c(0x205)]=parseInt(_0x3491f9['points']||0x0);const _0x4ceb8a=(_0x3491f9[_0x32230c(0x1b8)]??_0x3491f9[_0x32230c(0x24a)]??_0x25e3f7[0x0])?.[_0x32230c(0x1c9)]();_0x3491f9[_0x32230c(0x1b8)]=_0x4ceb8a;const _0x2ec9f4=normalizarId(_0x4ceb8a);_0x9b11b6[_0x2ec9f4]=_0x3491f9;}const _0x5d4d3e=Object[_0x32230c(0x1f2)](_0x9b11b6)['filter'](_0x108c6a=>_0x108c6a[_0x32230c(0x19b)]&&_0x108c6a[_0x32230c(0x19b)]['trim']()!=='')[_0x32230c(0x1e1)]((_0x2e0584,_0xd4b9b6)=>(_0xd4b9b6[_0x32230c(0x186)]||0x0)-(_0x2e0584['final']||0x0)),_0x2a3b33=document[_0x32230c(0x200)]('#tableCompacta');_0x2a3b33[_0x32230c(0x232)]='';const _0x5381be=document['createElement'](_0x32230c(0x19e));_0x5381be[_0x32230c(0x232)]=_0x32230c(0x21b),_0x2a3b33['appendChild'](_0x5381be);const _0x1880cc=document[_0x32230c(0x1e2)](_0x32230c(0x1e3));_0x5d4d3e[_0x32230c(0x1d9)]((_0x2d5f18,_0x41ca2c)=>{const _0x31144d=_0x32230c,_0x4a4f71=document[_0x31144d(0x1e2)]('tr');_0x4a4f71['innerHTML']=_0x31144d(0x203)+(_0x41ca2c+0x1)+_0x31144d(0x184)+_0x2d5f18[_0x31144d(0x1cb)]+_0x31144d(0x1df)+_0x2d5f18[_0x31144d(0x1b8)]+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22color:\x20#'+_0x2d5f18[_0x31144d(0x19a)]+_0x31144d(0x1c2)+_0x2d5f18[_0x31144d(0x19b)]+_0x31144d(0x190)+_0x2d5f18[_0x31144d(0x19b)]+_0x31144d(0x1ce)+_0x2d5f18[_0x31144d(0x205)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:\x20center;\x22>'+(_0x2d5f18[_0x31144d(0x186)]||0x0)+_0x31144d(0x220),_0x1880cc[_0x31144d(0x180)](_0x4a4f71);}),_0x2a3b33[_0x32230c(0x180)](_0x1880cc);}montarTabelaCompacta();async function montarTabelaEquipesCompacta(){const _0x526367=_0x494745,_0x352578=await carregarCSV(pilotosURL),_0x4edf6d=_0x352578[0x0],_0x479a0a={};for(let _0x57f193=0x1;_0x57f193<_0x352578[_0x526367(0x21a)];_0x57f193++){const _0x466013=_0x352578[_0x57f193],_0x19a0f0={};_0x4edf6d[_0x526367(0x1d9)]((_0x772f31,_0x16ab1f)=>_0x19a0f0[_0x772f31?.['trim']()[_0x526367(0x23a)]()]=_0x466013[_0x16ab1f]?.[_0x526367(0x1c9)]()),_0x19a0f0[_0x526367(0x205)]=parseInt(_0x19a0f0['points']||0x0);const _0x251622=(_0x19a0f0[_0x526367(0x1b8)]??_0x19a0f0[_0x526367(0x24a)]??_0x466013[0x0])?.['trim']();_0x19a0f0['piloto']=_0x251622;const _0x1d1331=normalizarId(_0x251622);_0x479a0a[_0x1d1331]=_0x19a0f0;}const _0x5af38e={};for(const _0x8b3f6d in _0x479a0a){const _0x5dfe54=_0x479a0a[_0x8b3f6d];if(!_0x5dfe54['equipe']||_0x5dfe54[_0x526367(0x19b)][_0x526367(0x1c9)]()==='')continue;if(_0x5dfe54[_0x526367(0x19b)][_0x526367(0x1c9)]()[_0x526367(0x23a)]()===_0x526367(0x1b1))continue;!_0x5af38e[_0x5dfe54['equipe']]&&(_0x5af38e[_0x5dfe54[_0x526367(0x19b)]]={'pilotos':[],'totalPoints':0x0,'totalPontos':0x0,'teamcolor':_0x5dfe54['teamcolor'],'logo':_0x526367(0x20f)+_0x5dfe54[_0x526367(0x19b)]+_0x526367(0x198)}),_0x5af38e[_0x5dfe54[_0x526367(0x19b)]][_0x526367(0x189)]['push'](_0x8b3f6d),_0x5af38e[_0x5dfe54['equipe']][_0x526367(0x1c3)]+=parseInt(_0x5dfe54[_0x526367(0x205)]??0x0),_0x5af38e[_0x5dfe54[_0x526367(0x19b)]][_0x526367(0x24b)]+=parseInt(_0x5dfe54['final']??_0x5dfe54[_0x526367(0x205)]??0x0);}const _0x409e64=Object[_0x526367(0x241)](_0x5af38e)[_0x526367(0x1e1)](([,_0x5ec916],[,_0x1de8c6])=>_0x1de8c6[_0x526367(0x24b)]-_0x5ec916[_0x526367(0x24b)]),_0x2a3599=document['querySelector'](_0x526367(0x1b2));_0x2a3599[_0x526367(0x232)]='';const _0x4f970c=document[_0x526367(0x1e2)](_0x526367(0x19e));_0x4f970c[_0x526367(0x232)]=_0x526367(0x195),_0x2a3599[_0x526367(0x180)](_0x4f970c);const _0x945a3b=document[_0x526367(0x1e2)](_0x526367(0x1e3));_0x409e64['forEach'](([_0x3cb21d,_0x7c71d],_0x53bdaa)=>{const _0x1d63ab=_0x526367,_0x8d5202=document[_0x1d63ab(0x1e2)]('tr');_0x8d5202[_0x1d63ab(0x232)]=_0x1d63ab(0x214)+(_0x53bdaa+0x1)+_0x1d63ab(0x1a4)+_0x7c71d[_0x1d63ab(0x1ad)]+'\x22\x20style=\x22width:\x2025px;\x20vertical-align:\x20middle;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:#'+_0x7c71d['teamcolor']+_0x1d63ab(0x201)+_0x3cb21d+_0x1d63ab(0x1e0)+_0x7c71d['totalPoints']+'</strong></td>\x0a\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:\x20center;\x22><strong>'+_0x7c71d[_0x1d63ab(0x24b)]+'</strong></td>\x0a\x20\x20\x20\x20',_0x945a3b['appendChild'](_0x8d5202);}),_0x2a3599['appendChild'](_0x945a3b);}montarTabelaEquipesCompacta();function _0x80f4(){const _0x49246e=['join','replace','</td>\x0a\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','</span>\x0a\x20\x20\x20\x20\x20\x20</h3>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-team\x22\x20style=\x22color:\x20#','textAlign','toUpperCase','\x22\x20style=\x22width:\x2018px;\x20height:\x20auto;\x22>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-score-mobile\x22\x20style=\x22margin:\x200\x208px;\x20white-space:\x20nowrap;\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20','map','DNF','border','</td>\x20\x0a\x20\x20\x20\x20<td\x20style=\x22color:\x20#','logo','9px','rowSpan','166764MtFAqC','reserve','#tabelaEquipesCompacta','</span>\x0a\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag-h2h\x22\x20src=\x22https://flagcdn.com/w40/','\x0a\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20<td\x20style=\x27color:black;\x20text-align:\x20center;\x27>','number','<sup\x20style=\x22font-size:75%;\x20font-weight:bold;\x20margin-left:2px;\x22>D</sup>','#ffffbf','piloto','<sup\x20style=\x22font-size:75%;\x20font-weight:bold;\x20margin-left:2px;\x22>F</sup>','</td>\x0a\x20\x20\x20\x20\x0a\x20\x20','.png\x22\x20alt=\x22Bandeira\x20','beforeend','div','click','#ff64640e','\x0a\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20<th>#</th>\x0a\x20\x20\x20\x20\x20\x20<th>Constructor</th>\x0a\x20\x20\x20\x20\x20\x20<th>Points</th>\x0a\x20\x20\x20\x20\x20\x20','1px\x20solid\x20black',';\x20font-style:\x20italic;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20style=\x27width:\x2020px;\x27\x20src=\x22logos/','totalPoints','tabConstructorsMobile','#000000ff','className',';\x20color:\x20','backgroundColor','trim','#headToHeadCompacto','country','<strong>','#ffe0ff','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22color:red;\x20text-align:\x20center;\x22>','6th','<th><img\x20class=\x22flag\x22\x20src=\x22https://flagcdn.com/w40/','#efcfff','cardsPilotos','keys','ptoSquare','zebra-light','</span>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a','tableCompacta','remove','forEach','\x0a\x20\x20\x20\x20</tr>\x0a\x20\x20','#414141ff','</span>\x0a\x20\x20\x20\x20</div>\x20\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-piloto\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-start;\x20align-items:\x20center;\x20flex:\x201;\x20gap:\x204px;\x22>\x0a\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag-h2h\x22\x20src=\x22https://flagcdn.com/w40/','\x22\x20style=\x22width:\x2020px;\x20margin:\x200px\x200px\x200px\x208px;\x20filter:\x20drop-shadow(0\x200\x203px\x20#','piloto-card','.png\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</span>\x0a\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:\x20center;\x22><strong>','sort','createElement','tbody','DNS','classList','db/BZK\x20F1\x20Com\x20pontuacao\x20Final\x20-\x20Pilotos.csv','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Points:</strong>\x20','</strong>','</td>\x0a\x20\x20\x20\x20<td><img\x20class=\x22flag\x22\x20src=\x22https://flagcdn.com/w40/','#tabelaEquipes','DSQ','split','12px','</span>\x0a\x20\x20\x20\x20','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Poles:</strong>\x20','none','editAM','values','pole','tabelaEquipesCompacta','.png\x22>\x20\x20','\x22>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-score\x22\x20style=\x27margin:\x2025px\x27>\x0a\x20\x20\x20\x20\x20\x20<span\x20','tabConstructors','textContent','push',';\x20filter:\x20drop-shadow(0\x200\x204px\x20#','center','worst','#f4f4f4','1181064RYPKKp','.png\x22\x20alt=\x22Logo\x20','querySelector',';\x20font-style:\x20italic;\x22>\x20','13th','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:','points','</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a','filter','\x0a\x20\x20<div\x20class=\x22h2h-matchup\x20compacto\x22\x20style=\x22\x0a\x20\x20\x20\x20margin-top:\x204px;\x20\x0a\x20\x20\x20\x20font-size:\x2010px;\x20\x0a\x20\x20\x20\x20align-items:\x20center;\x20\x0a\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20background-color:\x20#111;\x20\x0a\x20\x20\x20\x20padding:\x206px\x200px\x206px\x200px;\x20\x0a\x20\x20\x20\x20border-radius:\x206px;\x0a\x20\x20\x20\x20box-shadow:\x200\x200\x208px\x20rgba(175,\x205,\x205,\x200.19);\x0a\x20\x20\x22>\x0a\x20\x20\x20\x20<img\x20class=\x22team-logo\x22\x20src=\x22logos/','<td\x20style=\x22border:1px\x20solid\x20black;\x20text-align:center;\x22>Race</td>','#dfffdf','setAttribute','nome','</th>','#ffffffff','logos/',');\x22>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-piloto\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-end;\x20align-items:\x20center;\x20flex:\x201;\x20gap:\x204px;\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22piloto-nome\x22\x20style=\x22font-size:\x2010px;\x20white-space:\x20nowrap;\x22>','\x0a\x20\x20<tr>\x0a\x20\x20\x20\x20<th>#</th>\x0a\x20\x20\x20\x20<th>Piloto</th>\x0a\x20\x20\x20\x20<th>Equipe</th>\x0a\x20\x20\x20\x20<th>Pontuação\x20</th>\x0a\x20\x20\x20\x20',';\x20font-style:\x20italic;\x22>\x0a\x20\x20\x20\x20\x20\x20<img\x20style=\x27width:\x2025px;\x27\x20src=\x22logos/','<sup\x20style=\x22font-size:75%;\x20font-weight:bold;\x20margin-left:2px;\x22>P</sup>','\x0a\x20\x20\x20\x20\x20\x20<td>','tabelaEquipes','8th','thead\x20tr','3rd',');\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22team-logo\x22\x20src=\x22logos/','length','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>#</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Piloto</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Equipe</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Pontuação\x20Total</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Pontuação\x20Final</th>\x20<!--\x20Nova\x20coluna\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20','DOMContentLoaded','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Worst\x20Finish:</strong>\x20','<sup\x20style=\x22font-size:75%;\x20font-weight:bold;\x20margin-left:2px;\x22>C</sup>','#ffdf9f','</td>\x20<!--\x20Nova\x20célula\x20com\x20p.final\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20','#wikipediaStyleTable','2nd','resultados','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Cleanest\x20Driver:</strong>\x20',';\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:1px\x20solid\x20#00000041;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20','headtohead-card','display','1382373kgfvtL','1074836fQFGNd','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Best\x20Finish:</strong>\x20','add','table','#headToHeadTable','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Podiums:</strong>\x20','podium','style=\x22color:\x20#90ee90;\x22','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Wins:</strong>\x20','innerHTML','zebra-dark','db/pontuacaof1.csv','</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22x\x22\x20style=\x22margin:\x200\x206px;\x20font-weight:\x20700;\x20font-size:\x2010px;\x22>x</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20','win','string','16th','\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22piloto-nome\x22>','toLowerCase','style','insertAdjacentHTML','.png\x22></th>','\x22\x20style=\x22width:\x2025px;\x20vertical-align:\x20middle;\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:#','25665dVjCwz','\x20flag\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span>','entries','218109sepmtw','fill','toString','.png\x22\x20alt=\x22','editHaas',';\x20text-align:center;\x20border:1px\x20solid\x20#00000041;\x20font-size:\x20','116YoDbxb','text','\ufeffpiloto','totalPontos','\x20-\x20','dotd','addEventListener','appendChild','tabDrivers',';\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:','\x22\x20style=\x22width:\x2080px;\x20margin-right:\x2012px;\x20filter:\x20drop-shadow(0\x200\x204px\x20#','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag\x22\x20src=\x22https://flagcdn.com/w40/','9th','final','#c9c9c9ff','18th','pilotos','<th>','background-color:','6kXVCVo','\x20logo\x22>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22card-stats\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Entries:</strong>\x20','getElementById','active','.png\x22/>\x20','#pontuacaoTable','17th','\x0a\x20\x20<div\x20class=\x22h2h-matchup\x22\x20style=\x27margin:\x200px\x2085px\x200px\x2025px;\x20\x27>\x0a\x20\x20\x20\x20<img\x20class=\x22team-logo\x22\x20src=\x22logos/','5th','\x0a\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20<th>#</th>\x0a\x20\x20\x20\x20\x20\x20<th>Construtor</th>\x0a\x20\x20\x20\x20\x20\x20<th>Total\x20Points</th>\x0a\x20\x20\x20\x20\x20\x20<th>Points</th>\x0a\x20\x20\x20\x20</tr>\x0a\x20\x20','\x0a\x20\x20<div\x20class=\x22card-inner\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22card-header\x22>\x0a\x20\x20\x20\x20\x20\x20<h3\x20class=\x22card-name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag\x22\x20src=\x22https://flagcdn.com/w40/','#cfcfff','.png','\x22\x20style=\x22width:\x2018px;\x20height:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22piloto-nome\x22\x20style=\x22font-size:\x2010px;\x20white-space:\x20nowrap;\x22>','teamcolor','equipe','\x20style=\x22font-weight:\x20700;\x20font-size:\x2010px;\x22>',');\x22>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-piloto\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-end;\x20align-items:\x20center;\x20flex:\x201;\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22piloto-nome\x22>','thead','</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22stat\x22><strong>Driver\x20of\x20the\x20day:</strong>\x20','12th','1192285qGXIdw'];_0x80f4=function(){return _0x49246e;};return _0x80f4();}async function montarTabelaPontuacao(){const _0x12dc12=_0x494745,_0x36fadc=await carregarCSV(pontuacaoURL),_0x22812b={};for(let _0x4688d1=0x1;_0x4688d1<_0x36fadc[_0x12dc12(0x21a)];_0x4688d1++){const _0x244ca2=_0x36fadc[_0x4688d1][0x0]?.[_0x12dc12(0x1c9)](),_0x38f6ac=_0x36fadc[_0x4688d1][0x1]?.[_0x12dc12(0x1c9)]();_0x244ca2&&_0x38f6ac&&(_0x22812b[_0x244ca2]=_0x38f6ac);}const _0x18e7a9=document[_0x12dc12(0x200)](_0x12dc12(0x191)),_0x31b4e5=_0x18e7a9[_0x12dc12(0x200)](_0x12dc12(0x217)),_0x7f2d5c=_0x18e7a9[_0x12dc12(0x200)](_0x12dc12(0x1e3)),_0x24cb2c=['Position','1st',_0x12dc12(0x222),_0x12dc12(0x218),'4th',_0x12dc12(0x194),_0x12dc12(0x1cf),'7th',_0x12dc12(0x216),_0x12dc12(0x185),'10th','11th',_0x12dc12(0x1a0),_0x12dc12(0x202),'14th','15th',_0x12dc12(0x238),_0x12dc12(0x192),_0x12dc12(0x188),'19th','20th','P','F','D','C'];_0x31b4e5[_0x12dc12(0x232)]=_0x24cb2c[_0x12dc12(0x1a9)](_0x5a2b0a=>_0x12dc12(0x18a)+_0x5a2b0a+_0x12dc12(0x20d))['join']('');function _0x287e9e(_0x187fd1){const _0x8d13d=_0x12dc12;if(_0x187fd1===0x1)return'#ffffbf';if(_0x187fd1===0x2)return _0x8d13d(0x187);if(_0x187fd1===0x3)return _0x8d13d(0x21f);if(_0x187fd1>=0x4&&_0x187fd1<=0xa)return'#dfffdf';if(_0x187fd1>=0xb&&_0x187fd1<=0x14)return _0x8d13d(0x197);return _0x8d13d(0x1fd);}const _0x21d813=document[_0x12dc12(0x1e2)]('tr');_0x21d813['innerHTML']=_0x12dc12(0x209);for(let _0x14a66a=0x1;_0x14a66a<=0x14;_0x14a66a++){const _0x444ed5=_0x22812b['P'+_0x14a66a]||0x0,_0x4ba9fe=document['createElement']('td');_0x4ba9fe[_0x12dc12(0x1f8)]=_0x444ed5,_0x4ba9fe['className']=_0x12dc12(0x1d4),_0x4ba9fe[_0x12dc12(0x23b)][_0x12dc12(0x1c8)]=_0x287e9e(_0x14a66a),_0x4ba9fe[_0x12dc12(0x23b)][_0x12dc12(0x1a6)]=_0x12dc12(0x1fb),_0x4ba9fe[_0x12dc12(0x23b)][_0x12dc12(0x1ab)]=_0x12dc12(0x1c1),_0x21d813[_0x12dc12(0x180)](_0x4ba9fe);}const _0x3ab217={'Pole':_0x12dc12(0x1cd),'FL':'#ffe0ff','DOTD':_0x12dc12(0x1cd),'CD':_0x12dc12(0x1cd)};Object[_0x12dc12(0x1d3)](_0x3ab217)[_0x12dc12(0x1d9)](_0x11cce5=>{const _0x3ad9f5=_0x12dc12,_0x32a897=document[_0x3ad9f5(0x1e2)]('td');_0x32a897['textContent']=_0x22812b[_0x11cce5]||0x0,_0x32a897['className']='ptoSquare',_0x32a897[_0x3ad9f5(0x23b)][_0x3ad9f5(0x1c8)]=_0x3ab217[_0x11cce5],_0x32a897[_0x3ad9f5(0x23b)]['textAlign']=_0x3ad9f5(0x1fb),_0x32a897[_0x3ad9f5(0x23b)][_0x3ad9f5(0x1ab)]='1px\x20solid\x20black',_0x21d813[_0x3ad9f5(0x180)](_0x32a897);}),_0x7f2d5c[_0x12dc12(0x180)](_0x21d813);const _0x398934=document['createElement']('tr');_0x398934['innerHTML']='<td\x20style=\x22border:1px\x20solid\x20black;\x20text-align:center;\x22>Sprint</td>';for(let _0x1a0baf=0x1;_0x1a0baf<=0x14;_0x1a0baf++){const _0x81f89a=_0x22812b['SP'+_0x1a0baf]||0x0,_0x17962b=document[_0x12dc12(0x1e2)]('td');_0x17962b[_0x12dc12(0x1f8)]=_0x81f89a,_0x17962b[_0x12dc12(0x1c6)]=_0x12dc12(0x1d4),_0x17962b[_0x12dc12(0x23b)][_0x12dc12(0x1c8)]=_0x287e9e(_0x1a0baf),_0x17962b[_0x12dc12(0x23b)][_0x12dc12(0x1a6)]=_0x12dc12(0x1fb),_0x17962b[_0x12dc12(0x23b)][_0x12dc12(0x1ab)]=_0x12dc12(0x1c1),_0x398934[_0x12dc12(0x180)](_0x17962b);}const _0x2cf26e={'Pole':_0x12dc12(0x1cd),'FL':_0x12dc12(0x1cd),'DOTD':_0x12dc12(0x1cd),'CD':_0x12dc12(0x1cd)};Object[_0x12dc12(0x1d3)](_0x2cf26e)['forEach'](_0xe365b1=>{const _0x3f3534=_0x12dc12,_0x265c4d=document[_0x3f3534(0x1e2)]('td');_0x265c4d[_0x3f3534(0x1f8)]=_0x22812b['S'+_0xe365b1]||0x0,_0x265c4d[_0x3f3534(0x1c6)]='ptoSquare',_0x265c4d['style'][_0x3f3534(0x1c8)]=_0x2cf26e[_0xe365b1],_0x265c4d[_0x3f3534(0x23b)][_0x3f3534(0x1a6)]=_0x3f3534(0x1fb),_0x265c4d[_0x3f3534(0x23b)][_0x3f3534(0x1ab)]=_0x3f3534(0x1c1),_0x398934['appendChild'](_0x265c4d);}),_0x7f2d5c[_0x12dc12(0x180)](_0x398934);}function _0x622a(_0x5b11c6,_0xd28b42){const _0x80f4a0=_0x80f4();return _0x622a=function(_0x622aa1,_0x2a8ba4){_0x622aa1=_0x622aa1-0x17e;let _0x1e0d90=_0x80f4a0[_0x622aa1];return _0x1e0d90;},_0x622a(_0x5b11c6,_0xd28b42);}montarTabelaPontuacao();async function montarTabelaHeadToHead(){const _0x4f760f=_0x494745,_0x2b53f3=await carregarCSV(pilotosURL),_0x647d5=await carregarCSV(etapasURL),_0x4c7689=_0x2b53f3[0x0],_0x57abec=_0x647d5[0x0],_0x4b2cd0=_0x57abec[_0x4f760f(0x21a)]-0x1,_0x15eaef={};for(let _0x42e60e=0x1;_0x42e60e<_0x2b53f3['length'];_0x42e60e++){const _0x4b9fc2=_0x2b53f3[_0x42e60e],_0x225d99={};_0x4c7689[_0x4f760f(0x1d9)]((_0x42a7fd,_0x2bf7a2)=>_0x225d99[_0x42a7fd[_0x4f760f(0x1c9)]()[_0x4f760f(0x23a)]()]=_0x4b9fc2[_0x2bf7a2]?.[_0x4f760f(0x1c9)]());const _0x323e92=normalizarId(_0x225d99[_0x4f760f(0x1b8)]);_0x15eaef[_0x323e92]=_0x225d99;}const _0x2f9dae={};for(let _0x207c56=0x2;_0x207c56<=0x17;_0x207c56++){const _0x2591e6=_0x647d5[_0x207c56];for(let _0x2c37ff=0x1;_0x2c37ff<_0x2591e6['length'];_0x2c37ff++){const _0x7a1a27=normalizarId(_0x2591e6[_0x2c37ff]);if(!_0x2f9dae[_0x7a1a27])_0x2f9dae[_0x7a1a27]=[];_0x2f9dae[_0x7a1a27][_0x2c37ff-0x1]=_0x207c56-0x1;}}for(let _0x4c1745=0x1c;_0x4c1745<=0x30;_0x4c1745++){const _0x329277=_0x647d5[_0x4c1745];for(let _0x2edd38=0x1;_0x2edd38<_0x329277[_0x4f760f(0x21a)];_0x2edd38++){const _0x4c0272=normalizarId(_0x329277[_0x2edd38]);if(!_0x2f9dae[_0x4c0272])_0x2f9dae[_0x4c0272]=[];_0x2f9dae[_0x4c0272][_0x2edd38-0x1]='DNF';}}const _0x13e06f={};for(let _0x571f66 in _0x15eaef){const _0x31aa4c=_0x15eaef[_0x571f66];if(!_0x31aa4c['equipe'])continue;if(!_0x13e06f[_0x31aa4c[_0x4f760f(0x19b)]])_0x13e06f[_0x31aa4c[_0x4f760f(0x19b)]]=[];_0x13e06f[_0x31aa4c[_0x4f760f(0x19b)]][_0x4f760f(0x1f9)]({'id':_0x571f66,'nome':_0x31aa4c[_0x4f760f(0x1b8)],'country':_0x31aa4c[_0x4f760f(0x1cb)],'equipe':_0x31aa4c[_0x4f760f(0x19b)],'teamcolor':_0x31aa4c[_0x4f760f(0x19a)]});}const _0x210f5f=document['querySelector'](_0x4f760f(0x22d));if(!_0x210f5f)return;_0x210f5f[_0x4f760f(0x232)]='';for(let _0xf8a7b1 in _0x13e06f){const _0x44cd25=_0x13e06f[_0xf8a7b1];if(_0x44cd25[_0x4f760f(0x21a)]!==0x2)continue;const [_0x494b52,_0x3d9b2c]=_0x44cd25;let _0x1d2bce=0x0,_0x7b38e3=0x0;for(let _0x8630d4=0x0;_0x8630d4<_0x4b2cd0;_0x8630d4++){const _0x320da5=_0x2f9dae[_0x494b52['id']]?.[_0x8630d4],_0x2ace15=_0x2f9dae[_0x3d9b2c['id']]?.[_0x8630d4],_0x4ae3f1=typeof _0x320da5===_0x4f760f(0x237)?_0x320da5[_0x4f760f(0x1c9)]()[_0x4f760f(0x1a7)]():_0x320da5,_0x401a8d=typeof _0x2ace15==='string'?_0x2ace15[_0x4f760f(0x1c9)]()[_0x4f760f(0x1a7)]():_0x2ace15,_0x4af328=_0x4ae3f1===_0x4f760f(0x1aa),_0x460cfc=_0x401a8d===_0x4f760f(0x1aa);if(!_0x4af328&&_0x460cfc&&typeof _0x4ae3f1===_0x4f760f(0x1b5))_0x1d2bce++;else{if(_0x4af328&&!_0x460cfc&&typeof _0x401a8d===_0x4f760f(0x1b5))_0x7b38e3++;else{if(!_0x4af328&&!_0x460cfc&&typeof _0x4ae3f1===_0x4f760f(0x1b5)&&typeof _0x401a8d===_0x4f760f(0x1b5)){if(_0x4ae3f1<_0x401a8d)_0x1d2bce++;else _0x7b38e3++;}}}}const _0x3d4f99=document[_0x4f760f(0x1e2)]('div');_0x3d4f99[_0x4f760f(0x1c6)]=_0x4f760f(0x226);const _0x15c2ec=_0x1d2bce===_0x7b38e3,_0x4f3d5b=_0x1d2bce>_0x7b38e3?_0x4f760f(0x230):'',_0x40c050=_0x7b38e3>_0x1d2bce?_0x4f760f(0x230):'';_0x3d4f99[_0x4f760f(0x232)]=_0x4f760f(0x193)+_0x494b52[_0x4f760f(0x19b)]+'.png\x22\x20alt=\x22Logo\x20'+_0x494b52[_0x4f760f(0x19b)]+_0x4f760f(0x183)+_0x494b52[_0x4f760f(0x19a)]+_0x4f760f(0x19d)+_0x494b52[_0x4f760f(0x20c)]+'</span>\x0a\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag-h2h\x22\x20src=\x22https://flagcdn.com/w40/'+_0x494b52[_0x4f760f(0x1cb)]+_0x4f760f(0x1bb)+_0x494b52[_0x4f760f(0x1cb)]+_0x4f760f(0x1f6)+_0x4f3d5b+'>'+_0x1d2bce+'</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22x\x22>x</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20'+_0x40c050+'>'+_0x7b38e3+'</span>\x0a\x20\x20\x20\x20</div>\x20\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20<div\x20class=\x22h2h-piloto\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-start;\x20align-items:\x20center;\x20flex:\x201;\x22>\x0a\x20\x20\x20\x20\x20\x20<img\x20class=\x22flag-h2h\x22\x20src=\x22https://flagcdn.com/w40/'+_0x3d9b2c['country']+_0x4f760f(0x1bb)+_0x3d9b2c[_0x4f760f(0x1cb)]+_0x4f760f(0x239)+_0x3d9b2c[_0x4f760f(0x20c)]+_0x4f760f(0x1d6),_0x210f5f[_0x4f760f(0x180)](_0x3d4f99);const _0x3fcc7c=document[_0x4f760f(0x200)](_0x4f760f(0x1ca));if(_0x3fcc7c){const _0x539559=_0x4f760f(0x208)+_0x494b52[_0x4f760f(0x19b)]+_0x4f760f(0x1ff)+_0x494b52['equipe']+_0x4f760f(0x1dd)+_0x494b52[_0x4f760f(0x19a)]+_0x4f760f(0x210)+_0x494b52[_0x4f760f(0x20c)]+_0x4f760f(0x1b3)+_0x494b52[_0x4f760f(0x1cb)]+_0x4f760f(0x1bb)+_0x494b52[_0x4f760f(0x1cb)]+_0x4f760f(0x1a8)+_0x4f3d5b+'\x20style=\x22font-weight:\x20700;\x20font-size:\x2010px;\x22>'+_0x1d2bce+_0x4f760f(0x235)+_0x40c050+_0x4f760f(0x19c)+_0x7b38e3+_0x4f760f(0x1dc)+_0x3d9b2c['country']+_0x4f760f(0x1bb)+_0x3d9b2c[_0x4f760f(0x1cb)]+_0x4f760f(0x199)+_0x3d9b2c['nome']+_0x4f760f(0x1d6);_0x3fcc7c[_0x4f760f(0x23c)](_0x4f760f(0x1bc),_0x539559);}}}montarTabelaHeadToHead(),document[_0x494745(0x17f)](_0x494745(0x21c),function(){const _0x3f630f=_0x494745,_0x1ae7c5=document[_0x3f630f(0x18e)](_0x3f630f(0x181)),_0x1b7390=document['getElementById'](_0x3f630f(0x1f7)),_0x1f813e=document[_0x3f630f(0x18e)]('wikipediaStyleTable'),_0x4e583f=document['getElementById'](_0x3f630f(0x215));_0x4e583f[_0x3f630f(0x23b)]['display']=_0x3f630f(0x1f0),_0x1ae7c5[_0x3f630f(0x17f)](_0x3f630f(0x1be),function(){const _0x53520a=_0x3f630f;this[_0x53520a(0x1e5)][_0x53520a(0x22b)](_0x53520a(0x18f)),_0x1b7390['classList'][_0x53520a(0x1d8)](_0x53520a(0x18f)),_0x1f813e[_0x53520a(0x23b)][_0x53520a(0x227)]='table',_0x4e583f['style'][_0x53520a(0x227)]=_0x53520a(0x1f0);}),_0x1b7390[_0x3f630f(0x17f)](_0x3f630f(0x1be),function(){const _0x43e6c1=_0x3f630f;this['classList']['add'](_0x43e6c1(0x18f)),_0x1ae7c5[_0x43e6c1(0x1e5)]['remove'](_0x43e6c1(0x18f)),_0x1f813e[_0x43e6c1(0x23b)]['display']=_0x43e6c1(0x1f0),_0x4e583f['style'][_0x43e6c1(0x227)]=_0x43e6c1(0x22c);});}),document[_0x494745(0x17f)](_0x494745(0x21c),function(){const _0x409be8=_0x494745,_0x10fecf=document[_0x409be8(0x18e)]('tabDriversMobile'),_0xef3158=document['getElementById'](_0x409be8(0x1c4)),_0x8dcbc7=document[_0x409be8(0x18e)](_0x409be8(0x1d7)),_0x3d57b2=document[_0x409be8(0x18e)](_0x409be8(0x1f4));_0x3d57b2[_0x409be8(0x23b)][_0x409be8(0x227)]=_0x409be8(0x1f0),_0x10fecf['addEventListener'](_0x409be8(0x1be),function(){const _0x163c64=_0x409be8;this[_0x163c64(0x1e5)][_0x163c64(0x22b)](_0x163c64(0x18f)),_0xef3158[_0x163c64(0x1e5)][_0x163c64(0x1d8)](_0x163c64(0x18f)),_0x8dcbc7[_0x163c64(0x23b)][_0x163c64(0x227)]=_0x163c64(0x22c),_0x3d57b2[_0x163c64(0x23b)][_0x163c64(0x227)]=_0x163c64(0x1f0);}),_0xef3158['addEventListener'](_0x409be8(0x1be),function(){const _0x52abb3=_0x409be8;this[_0x52abb3(0x1e5)][_0x52abb3(0x22b)](_0x52abb3(0x18f)),_0x10fecf[_0x52abb3(0x1e5)][_0x52abb3(0x1d8)](_0x52abb3(0x18f)),_0x8dcbc7[_0x52abb3(0x23b)][_0x52abb3(0x227)]=_0x52abb3(0x1f0),_0x3d57b2[_0x52abb3(0x23b)][_0x52abb3(0x227)]=_0x52abb3(0x22c);});});
+
+  const pilotosURL = 'db/BZK F1 Com pontuacao Final - Pilotos.csv';
+  const etapasURL = 'db/BZK F1 Com pontuacao Final - Etapas.csv';
+  const pontuacaoURL = 'db/pontuacaof1.csv'
+
+  async function carregarCSV(url) {
+    const res = await fetch(url);
+    const texto = await res.text();
+    return texto.trim().split('\n').map(l => l.split(','));
+  }
+
+  function normalizarId(nome) {
+    return nome?.toLowerCase().replace(/\s/g, '');
+  }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// CARDS PILOTOS
+
+async function montarCardsPilotos() {
+  const pilotosData = await carregarCSV(pilotosURL);
+  const headersPilotos = pilotosData[0];
+
+  const container = document.getElementById("cardsPilotos");
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  for (let i = 1; i < pilotosData.length; i++) {
+    const row = pilotosData[i];
+    const piloto = {};
+    headersPilotos.forEach((h, j) => piloto[h.trim().toLowerCase()] = row[j]?.trim());
+
+    // Verifica se a equipe está vazia
+    if (!piloto.equipe || piloto.equipe === '' || piloto.piloto == 'editHaas' || piloto.piloto == 'editAM') continue;
+
+    const card = document.createElement("div");
+    card.className = "piloto-card";
+
+    // <p class="card-team" style="color: #${piloto.teamcolor};"> <img style='width: 25px'; src="logos/${piloto.equipe}.png"/>  ${piloto.equipe}</p>
+card.innerHTML = `
+  <div class="card-inner">
+    <div class="card-header">
+      <h3 class="card-name">
+        <img class="flag" src="https://flagcdn.com/w40/${piloto.country}.png" alt="${piloto.country} flag">
+        <span>${piloto.display}</span>
+      </h3>
+      <div class="card-team" style="color: #${piloto.teamcolor}; filter: drop-shadow(0 0 4px #${piloto.teamcolor});">
+        <img class="team-logo" src="logos/${piloto.equipe}.png" alt="${piloto.equipe} logo">
+      </div>
+    </div>
+    <div class="card-stats">
+      <div class="stat"><strong>Entries:</strong> ${piloto.entries || 0}</div>
+      <div class="stat"><strong>Best Finish:</strong> ${piloto.best || 0}</div>
+      <div class="stat"><strong>Worst Finish:</strong> ${piloto.worst || 0}</div>
+      <div class="stat"><strong>Points:</strong> ${piloto.points || 0}</div>
+      <div class="stat"><strong>Wins:</strong> ${piloto.win || 0}</div>
+      <div class="stat"><strong>Podiums:</strong> ${piloto.podium || 0}</div>
+      <div class="stat"><strong>Top 10:</strong> ${piloto["top 10"] || 0}</div>
+      <div class="stat"><strong>Poles:</strong> ${piloto.pole || 0}</div>
+      <div class="stat"><strong>Fastest Laps:</strong> ${piloto.fl || 0}</div>
+      <div class="stat"><strong>Driver of the day:</strong> ${piloto.dotd || 0}</div>
+      <div class="stat"><strong>Cleanest Driver:</strong> ${piloto.cd || 0}</div>
+    </div>
+  </div>
+`;
+
+
+
+    container.appendChild(card);
+  }
+}
+montarCardsPilotos();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// TABELA PILOTOS
+async function montarTabelaWikipedia() {
+  const pilotosData = await carregarCSV(pilotosURL);
+  const etapasData = await carregarCSV(etapasURL);
+
+  const headersPilotos = pilotosData[0];
+  const headersEtapas = etapasData[0];
+  const rounds = headersEtapas.length - 1;
+
+  // Pilotos como objetos indexados por nome normalizado
+  const pilotos = {};
+  for (let i = 1; i < pilotosData.length; i++) {
+    const row = pilotosData[i];
+    const obj = {};
+    headersPilotos.forEach((h, j) => obj[h?.trim().toLowerCase()] = row[j]?.trim());
+
+    obj.points = parseInt(obj.points || 0);
+
+    // ⚠️ fallback mínimo pro nome do piloto (não muda o fluxo quando já está ok)
+    const nomePiloto = (obj.piloto ?? obj['\ufeffpiloto'] ?? row[0])?.trim();
+    obj.piloto = nomePiloto; // garante que obj.piloto exista
+
+    const id = normalizarId(nomePiloto);
+    pilotos[id] = obj;
+  }
+
+  // Resultados por piloto por rodada
+  const resultadosPorPiloto = {};
+
+  // ✅ Posições agora vão de linhas 3 a 62 (índices 2..61)
+  for (let i = 2; i <= 61; i++) {
+    const row = etapasData[i];
+    if (!row) continue;
+    for (let r = 1; r < row.length; r++) {
+      const piloto = normalizarId(row[r]);
+      if (!piloto) continue;
+      if (!resultadosPorPiloto[piloto]) resultadosPorPiloto[piloto] = [];
+      resultadosPorPiloto[piloto][r - 1] = i - 1; // P1 = 1
+    }
+  }
+
+  // ✅ Extras 
+  const extras = {};
+  const extrasMap = {
+    71: 'F', // FL
+    72: 'P', // Pole
+    73: 'D', // DOTD
+    74: 'C'  // Cleanest Driver
+  };
+  for (let line in extrasMap) {
+    const row = etapasData[+line];
+    if (!row) continue;
+    for (let r = 1; r < row.length; r++) {
+      const piloto = normalizarId(row[r]);
+      if (!piloto) continue;
+      if (!extras[piloto]) extras[piloto] = {};
+      if (!extras[piloto][r - 1]) extras[piloto][r - 1] = [];
+      extras[piloto][r - 1].push(extrasMap[line]);
+    }
+  }
+
+  // Ordena por pontos
+  const pilotosOrdenados = Object.values(pilotos)
+    .filter(p => resultadosPorPiloto[normalizarId(p.piloto)])
+    .sort((a, b) => b.points - a.points);
+
+  const table = document.querySelector("#wikipediaStyleTable");
+  const thead = table.querySelector("thead tr");
+  const tbody = table.querySelector("tbody");
+
+// Cabeçalho
+thead.innerHTML = `
+  <tr>
+    <th>#</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Points </th>
+    ${[...Array(rounds)].map((_, i) => {
+      const countryCode = etapasData[1][i + 1]?.toLowerCase() || '';
+      return `<th><img class="flag" src="https://flagcdn.com/w40/${countryCode}.png"></th>`;
+    }).join('')}
+  </tr>
+`;
+
+// Corpo
+tbody.innerHTML = '';
+pilotosOrdenados.forEach((p, i) => {
+  const id = normalizarId(p.piloto);
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${i + 1}</td>
+    <td><img class="flag" src="https://flagcdn.com/w40/${p.country}.png">  ${p.display}</td> 
+    <td style="color: #${p.teamcolor}; font-style: italic;">
+      <img style='width: 25px;' src="logos/${p.equipe}.png"/> ${p.equipe}
+    </td>
+    <td style='color:black; text-align: center;'>${p.points}</td>
+    
+  `;
+
+
+    for (let r = 0; r < rounds; r++) {
+      const resultado = resultadosPorPiloto[id]?.[r];
+      const td = document.createElement('td');
+      td.style.textAlign = 'center';
+      let bgColor = "#ffffffff";
+      let fontColor = "#000000ff";
+      let texto = '';
+      let fSize = '12px';
+
+      if (typeof resultado === 'number') {
+        if (resultado >= 23 && resultado <= 39) {
+          texto = 'DNF';
+          bgColor = "#efcfff";
+          fSize = '9px';
+        } else if (resultado >= 40 && resultado <= 43) {
+          texto = 'DSQ';
+          fontColor = "#ffffffff"
+          bgColor = "#414141ff";
+          fSize = '9px';
+        } else if (resultado >= 44 && resultado <= 60) { //DNS
+          texto = ' - ';
+          bgColor = "#ff64640e";
+          fSize = '9px';
+        } else {
+          texto = resultado.toString();
+          // Cores por posição
+          if (resultado === 1)      bgColor = "#ffffbf";
+          else if (resultado === 2) bgColor = "#c9c9c9ff";
+          else if (resultado === 3) bgColor = "#ffdf9f";
+          else if (resultado >= 4 && resultado <= 10) bgColor = "#dfffdf";
+          else if (resultado >= 11 && resultado <= 20) bgColor = "#cfcfff";
+
+          // Extras
+          const flLine   = 70;
+          const poleLine = 71;
+          const dotdLine = 72;
+          const cdLine   = 73;
+
+          const pilotoFL   = etapasData[flLine]?.[r + 1]?.trim();
+          const pilotoPole = etapasData[poleLine]?.[r + 1]?.trim();
+          const pilotoDOTD = etapasData[dotdLine]?.[r + 1]?.trim();
+          const pilotoCD   = etapasData[cdLine]?.[r + 1]?.trim();
+
+          let extrasHTML = "";
+          if (normalizarId(pilotoPole) === id) extrasHTML += `<sup style="font-size:75%; font-weight:bold; margin-left:2px;">P</sup>`;
+          if (normalizarId(pilotoFL)   === id) extrasHTML += `<sup style="font-size:75%; font-weight:bold; margin-left:2px;">F</sup>`;
+          if (normalizarId(pilotoDOTD) === id) extrasHTML += `<sup style="font-size:75%; font-weight:bold; margin-left:2px;">D</sup>`;
+          if (normalizarId(pilotoCD)   === id) extrasHTML += `<sup style="font-size:75%; font-weight:bold; margin-left:2px;">C</sup>`;
+
+          texto = `${texto}${extrasHTML}`;
+        }
+      } else {
+        texto = '';
+      }
+
+      td.innerHTML = texto;
+      td.className = "ptoSquare";
+      td.setAttribute('style', `background-color:${bgColor}; color: ${fontColor}; text-align:center; border:1px solid #00000041; font-size: ${fSize}; `);
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+  });
+}
+montarTabelaWikipedia();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// TABELA DE EQUIPES
+async function montarTabelaEquipes() {
+  const pilotosData = await carregarCSV(pilotosURL);
+  const etapasData = await carregarCSV(etapasURL);
+
+  const headersPilotos = pilotosData[0];
+  const headersEtapas = etapasData[0];
+  const rounds = headersEtapas.length - 1;
+
+  // Mapear pilotos
+  const pilotos = {};
+  for (let i = 1; i < pilotosData.length; i++) {
+    const row = pilotosData[i];
+    const obj = {};
+    headersPilotos.forEach((h, j) => obj[h?.trim().toLowerCase()] = row[j]?.trim());
+    obj.points = parseInt(obj.points || 0);
+
+    const nomePiloto = (obj.piloto ?? obj['\ufeffpiloto'] ?? row[0])?.trim();
+    obj.piloto = nomePiloto;
+
+    const id = normalizarId(nomePiloto);
+    pilotos[id] = obj;
+  }
+
+  // Agrupar pilotos por equipe
+  const equipes = {};
+  for (let id in pilotos) {
+    const p = pilotos[id];
+    if (!p.equipe) continue;
+    if (p.equipe.toLowerCase() === "reserve") continue;
+
+    if (!equipes[p.equipe]) {
+      equipes[p.equipe] = {
+        pilotos: [],
+        totalPontos: 0,   // Points final
+        totalPoints: 0,   // Points acumulada total
+        teamcolor: p.teamcolor,
+        logo: `logos/${p.equipe}.png`,
+        resultados: Array(rounds).fill([])
+      };
+    }
+
+    equipes[p.equipe].pilotos.push(id);
+    equipes[p.equipe].totalPontos += parseInt(p.total ?? p.points ?? 0);
+    equipes[p.equipe].totalPoints += parseInt(p.points ?? 0);
+  }
+
+  // Obter posições dos pilotos (P1–P60)
+  const resultadosPorPiloto = {};
+  for (let i = 2; i <= 61; i++) {
+    const row = etapasData[i];
+    if (!row) continue;
+    for (let r = 1; r < row.length; r++) {
+      const pilotoId = normalizarId(row[r]);
+      if (!pilotoId) continue;
+      if (!resultadosPorPiloto[pilotoId]) resultadosPorPiloto[pilotoId] = [];
+
+      if (i >= 23 && i <= 39) resultadosPorPiloto[pilotoId][r - 1] = 'DNF';
+      else if (i >= 40 && i <= 43) resultadosPorPiloto[pilotoId][r - 1] = 'DSQ';
+      else if (i >= 44 && i <= 61) resultadosPorPiloto[pilotoId][r - 1] = 'DNS';
+      else resultadosPorPiloto[pilotoId][r - 1] = i - 1;
+    }
+  }
+
+  // Construir resultados por rodada para cada equipe
+  for (const nomeEquipe in equipes) {
+    const equipe = equipes[nomeEquipe];
+    equipe.resultados = Array.from({ length: rounds }, (_, r) => {
+      const posicoes = equipe.pilotos.map(pid => resultadosPorPiloto[pid]?.[r] ?? '-');
+      return posicoes;
+    });
+  }
+
+  // Ordenar equipes por Points final
+  const equipesOrdenadas = Object.entries(equipes)
+    .sort(([, a], [, b]) => b.totalPontos - a.totalPontos);
+
+  const table = document.querySelector("#tabelaEquipes");
+  const thead = table.querySelector("thead");
+  const tbody = table.querySelector("tbody");
+
+  // Cabeçalho
+  thead.innerHTML = `
+    <tr>
+      <th>#</th>
+      <th>Construtor</th>
+      <th>Points</th>
+      ${[...Array(rounds)].map((_, i) => {
+        const countryCode = etapasData[1][i + 1]?.toLowerCase() || '';
+        return `<th><img class="flag" src="https://flagcdn.com/w40/${countryCode}.png"></th>`;
+      }).join('')}
+    </tr>
+  `;
+
+  // Corpo
+  tbody.innerHTML = '';
+  equipesOrdenadas.forEach(([nomeEquipe, equipe], i) => {
+    const zebraClass = i % 2 === 0 ? 'zebra-light' : 'zebra-dark';
+    const [pid1, pid2] = equipe.pilotos;
+
+    const tr1 = document.createElement('tr');
+    const tr2 = document.createElement('tr');
+
+    // Nome da equipe com rowspan
+    const tdPos = document.createElement('td');
+    tdPos.rowSpan = 2;
+    tdPos.className = zebraClass;
+    tdPos.textContent = i + 1;
+
+    const tdEquipe = document.createElement('td');
+    tdEquipe.rowSpan = 2;
+    tdEquipe.className = zebraClass;
+    tdEquipe.innerHTML = `
+      <img src="${equipe.logo}" style="width: 25px; vertical-align: middle;">
+      <span style="color:#${equipe.teamcolor}; font-style: italic;"> ${nomeEquipe}</span>
+    `;
+
+    const tdTotalPoints = document.createElement('td');
+    tdTotalPoints.rowSpan = 2;
+    tdTotalPoints.className = zebraClass;
+    tdTotalPoints.innerHTML = `<strong>${equipe.totalPoints}</strong>`;
+
+    const tdPontos = document.createElement('td');
+    tdPontos.rowSpan = 2;
+    tdPontos.className = zebraClass;
+    tdPontos.innerHTML = `<strong>${equipe.totalPontos}</strong>`;
+
+    tr1.appendChild(tdPos);
+    tr1.appendChild(tdEquipe);
+    tr1.appendChild(tdTotalPoints);
+    //tr1.appendChild(tdPontos);
+
+    const criarCelulasRodadas = (pid) => {
+      const resultado = resultadosPorPiloto[pid] || [];
+      return [...Array(rounds)].map((_, r) => {
+        const res = resultado[r];
+        const td = document.createElement('td');
+        td.style.textAlign = 'center';
+
+        let texto = '-', cor = '#ffffffff';
+        let fontColor = '#000000ff'
+
+        if (res === 'DNF') {
+          texto = 'DNF';
+          cor = '#efcfff';
+        } else if (res === 'DNS') {
+          texto = ' - ';
+          cor = '#ffffffff';
+        } else if (res === 'DSQ') {
+          texto = 'DSQ';
+          cor = '#414141ff';
+          fontColor = '#ffffffff'
+        }else if (typeof res === 'number') {
+          texto = res.toString();
+          if (res === 1) cor = '#ffffbf';
+          else if (res === 2) cor = '#c9c9c9ff';
+          else if (res === 3) cor = '#ffdf9f';
+          else if (res >= 4 && res <= 10) cor = '#dfffdf';
+          else if (res >= 11 && res <= 60) cor = '#cfcfff';
+        }
+
+        td.innerText = texto;
+        td.setAttribute('style', `
+          background-color:${cor};
+          color:${fontColor};
+          text-align:center;
+          border:1px solid #00000041;
+          font-size: 12px;
+        `);
+        return td;
+      });
+    };
+
+    const cells1 = criarCelulasRodadas(pid1);
+    const cells2 = criarCelulasRodadas(pid2);
+
+    cells1.forEach(td => tr1.appendChild(td));
+    cells2.forEach(td => tr2.appendChild(td));
+
+    tbody.appendChild(tr1);
+    tbody.appendChild(tr2);
+  });
+}
+montarTabelaEquipes();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//TABELA PILOTOS COMPACTA
+async function montarTabelaCompacta() {
+    const pilotosData = await carregarCSV(pilotosURL);
+    const headersPilotos = pilotosData[0];
+
+    // Criar lista de pilotos
+    const pilotos = {};
+    for (let i = 1; i < pilotosData.length; i++) {
+        const row = pilotosData[i];
+        const obj = {};
+        headersPilotos.forEach((h, j) => obj[h?.trim().toLowerCase()] = row[j]?.trim());
+
+        obj.points = parseInt(obj.points || 0);
+
+        // ⚠️ fallback mínimo pro nome do piloto
+        const nomePiloto = (obj.piloto ?? obj['\ufeffpiloto'] ?? row[0])?.trim();
+        obj.piloto = nomePiloto;
+
+        const id = normalizarId(nomePiloto);
+        pilotos[id] = obj;
+    }
+
+    // Filtra apenas pilotos com equipe válida e ordena por pontos finais
+    const pilotosOrdenados = Object.values(pilotos)
+        .filter(p => p.equipe && p.equipe.trim() !== "")
+        .sort((a, b) => (b.points || 0) - (a.points || 0));
+
+    const table = document.querySelector("#tableCompacta");
+    table.innerHTML = ""; // limpa antes de montar
+
+    // Cabeçalho simples
+    const thead = document.createElement("thead");
+    thead.innerHTML = `
+        <tr>
+            <th>#</th>
+            <th>Driver</th>
+            <th>Team</th>
+            <th>Points</th>
+        </tr>
+    `;
+    table.appendChild(thead);
+
+    // Corpo da tabela
+    const tbody = document.createElement("tbody");
+    pilotosOrdenados.forEach((p, i) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${i + 1}</td>
+            <td>
+                <img class="flag" src="https://flagcdn.com/w40/${p.country}.png">
+                ${p.display}
+            </td>
+            <td style="color: #${p.teamcolor}; font-style: italic;">
+                <img style='width: 20px;' src="logos/${p.equipe}.png"/> ${p.equipe}
+            </td>
+            <td style="color:red; text-align: center;">${p.points}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+}
+montarTabelaCompacta();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// TABELA DE EQUIPE COMPACTA
+async function montarTabelaEquipesCompacta() {
+  const pilotosData = await carregarCSV(pilotosURL);
+  const headersPilotos = pilotosData[0];
+
+  // Mapear pilotos
+  const pilotos = {};
+  for (let i = 1; i < pilotosData.length; i++) {
+    const row = pilotosData[i];
+    const obj = {};
+    headersPilotos.forEach((h, j) => obj[h?.trim().toLowerCase()] = row[j]?.trim());
+    obj.points = parseInt(obj.points || 0);
+
+    const nomePiloto = (obj.piloto ?? obj['\ufeffpiloto'] ?? row[0])?.trim();
+    obj.piloto = nomePiloto;
+
+    const id = normalizarId(nomePiloto);
+    pilotos[id] = obj;
+  }
+
+  // Agrupar pilotos por equipe
+  const equipes = {};
+  for (const id in pilotos) {
+    const p = pilotos[id];
+    if (!p.equipe || p.equipe.trim() === "") continue;
+    if (p.equipe.trim().toLowerCase() === "reserve") continue;
+
+    if (!equipes[p.equipe]) {
+      equipes[p.equipe] = {
+        pilotos: [],
+        totalPoints: 0,   // Points acumulada total
+        totalPontos: 0,   // Points final (p.total)
+        teamcolor: p.teamcolor,
+        logo: `logos/${p.equipe}.png`,
+      };
+    }
+
+    equipes[p.equipe].pilotos.push(id);
+    equipes[p.equipe].totalPoints += parseInt(p.points ?? 0);
+    equipes[p.equipe].totalPontos += parseInt(p.total ?? p.points ?? 0);
+  }
+
+  // Ordenar equipes por Points final
+  const equipesOrdenadas = Object.entries(equipes)
+    .sort(([, a], [, b]) => b.totalPontos - a.totalPontos);
+
+  const table = document.querySelector("#tabelaEquipesCompacta");
+  table.innerHTML = ""; // limpa antes de montar
+
+  // Cabeçalho compacto
+  const thead = document.createElement("thead");
+  thead.innerHTML = `
+    <tr>
+      <th>#</th>
+      <th>Constructor</th>
+      <th>Points</th>
+    </tr>
+  `;
+  table.appendChild(thead);
+
+  // Corpo
+  const tbody = document.createElement("tbody");
+  equipesOrdenadas.forEach(([nomeEquipe, equipe], i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${i + 1}</td>
+      <td>
+        <img src="${equipe.logo}" style="width: 25px; vertical-align: middle;">
+        <span style="color:#${equipe.teamcolor}; font-style: italic;"> ${nomeEquipe}</span>
+      </td>
+      <td style="text-align: center;"><strong>${equipe.totalPoints}</strong></td>
+
+    `;
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+}
+montarTabelaEquipesCompacta();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// Tabela sistema de Points
+async function montarTabelaPontuacao() {
+  const pontuacaoData = await carregarCSV(pontuacaoURL);
+
+  // Mapeia os dados
+  const pontuacoes = {};
+  for (let i = 1; i < pontuacaoData.length; i++) {
+    const pos = pontuacaoData[i][0]?.trim();
+    const pts = pontuacaoData[i][1]?.trim();
+    if (pos && pts) {
+      pontuacoes[pos] = pts;
+    }
+  }
+
+  const table = document.querySelector("#pontuacaoTable");
+  const thead = table.querySelector("thead tr");
+  const tbody = table.querySelector("tbody");
+
+  // Cabeçalho
+  const colunas = [
+    "Position", "1st", "2nd", "3rd", "4th", "5th",
+    "6th", "7th", "8th", "9th", "10th",
+    "11th", "12th", "13th", "14th", "15th",
+    "16th", "17th", "18th", "19th", "20th",
+    "P", "F", "D", "C"
+  ];
+  thead.innerHTML = colunas.map(c => `<th>${c}</th>`).join('');
+
+  // Função de cor por posição
+  function corPorPosicao(pos) {
+    if (pos === 1) return '#ffffbf';
+    if (pos === 2) return '#c9c9c9ff';
+    if (pos === 3) return '#ffdf9f';
+    if (pos >= 4 && pos <= 10) return '#dfffdf';
+    if (pos >= 11 && pos <= 20) return '#cfcfff';
+    return '#f4f4f4'; // fallback
+  }
+
+  // Linha Race
+  const trRace = document.createElement('tr');
+  trRace.innerHTML = `<td style="border:1px solid black; text-align:center;">Race</td>`;
+  for (let i = 1; i <= 20; i++) {
+    const pontos = pontuacoes[`P${i}`] || 0;
+    const td = document.createElement('td');
+    td.textContent = pontos;
+    td.className = "ptoSquare";
+    td.style.backgroundColor = corPorPosicao(i);
+    td.style.textAlign = "center";
+    td.style.border = "1px solid black";
+    trRace.appendChild(td);
+  }
+
+  // Extras Race
+  const extrasRace = {
+    Pole: "#ffe0ff",
+    FL: "#ffe0ff",
+    DOTD: "#ffe0ff",
+    CD: "#ffe0ff"
+  };
+
+  Object.keys(extrasRace).forEach(key => {
+    const td = document.createElement('td');
+    td.textContent = pontuacoes[key] || 0;
+    td.className = "ptoSquare";
+    td.style.backgroundColor = extrasRace[key];
+    td.style.textAlign = "center";
+    td.style.border = "1px solid black";
+    trRace.appendChild(td);
+  });
+
+  tbody.appendChild(trRace);
+
+  // Linha Sprint
+  const trSprint = document.createElement('tr');
+  trSprint.innerHTML = `<td style="border:1px solid black; text-align:center;">Sprint</td>`;
+  for (let i = 1; i <= 20; i++) {
+    const pontos = pontuacoes[`SP${i}`] || 0;
+    const td = document.createElement('td');
+    td.textContent = pontos;
+    td.className = "ptoSquare";
+    td.style.backgroundColor = corPorPosicao(i);
+    td.style.textAlign = "center";
+    td.style.border = "1px solid black";
+    trSprint.appendChild(td);
+  }
+
+  // Extras Sprint
+  const extrasSprint = {
+    Pole: "#ffe0ff",
+    FL: "#ffe0ff",
+    DOTD: "#ffe0ff",
+    CD: "#ffe0ff"
+  };
+
+  Object.keys(extrasSprint).forEach(key => {
+    const td = document.createElement('td');
+    td.textContent = pontuacoes[`S${key}`] || 0; // procura por SPole, SFL, etc.
+    td.className = "ptoSquare";
+    td.style.backgroundColor = extrasSprint[key];
+    td.style.textAlign = "center";
+    td.style.border = "1px solid black";
+    trSprint.appendChild(td);
+  });
+
+  tbody.appendChild(trSprint);
+}
+montarTabelaPontuacao();
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// HEAD 2 HEAD
+async function montarTabelaHeadToHead() {
+  const pilotosData = await carregarCSV(pilotosURL);
+  const etapasData = await carregarCSV(etapasURL);
+
+  const headersPilotos = pilotosData[0];
+  const headersEtapas = etapasData[0];
+  const rounds = headersEtapas.length - 1;
+
+  const pilotos = {};
+  for (let i = 1; i < pilotosData.length; i++) {
+    const row = pilotosData[i];
+    const obj = {};
+    headersPilotos.forEach((h, j) => obj[h.trim().toLowerCase()] = row[j]?.trim());
+    const id = normalizarId(obj.piloto);
+    pilotos[id] = obj;
+  }
+
+  // Resultados por piloto por rodada
+  const resultados = {};
+  for (let i = 2; i <= 23; i++) {
+    const row = etapasData[i];
+    for (let r = 1; r < row.length; r++) {
+      const pilotoId = normalizarId(row[r]);
+      if (!resultados[pilotoId]) resultados[pilotoId] = [];
+      resultados[pilotoId][r - 1] = i - 1;
+    }
+  }
+
+  // DNFs (linhas 29–49 → índices 28–48)
+  for (let i = 28; i <= 48; i++) {
+    const row = etapasData[i];
+    for (let r = 1; r < row.length; r++) {
+      const piloto = normalizarId(row[r]);
+      if (!resultados[piloto]) resultados[piloto] = [];
+      resultados[piloto][r - 1] = 'DNF';
+    }
+  }
+
+  // Organizar pilotos por equipe
+  const equipes = {};
+  for (let id in pilotos) {
+    const p = pilotos[id];
+    if (!p.equipe) continue;
+    if (!equipes[p.equipe]) equipes[p.equipe] = [];
+    equipes[p.equipe].push({
+      id,
+      nome: p.piloto,
+      country: p.country,
+      equipe: p.equipe,
+      teamcolor: p.teamcolor
+    });
+  }
+
+  const container = document.querySelector("#headToHeadTable");
+  if (!container) return;
+
+  container.innerHTML = ''; // limpa container
+
+  for (let equipe in equipes) {
+    const pilotosEquipe = equipes[equipe];
+    if (pilotosEquipe.length !== 2) continue;
+
+    const [a, b] = pilotosEquipe;
+    let aVenceu = 0, bVenceu = 0;
+
+    for (let r = 0; r < rounds; r++) {
+      const rawA = resultados[a.id]?.[r];
+      const rawB = resultados[b.id]?.[r];
+
+      const resA = (typeof rawA === 'string') ? rawA.trim().toUpperCase() : rawA;
+      const resB = (typeof rawB === 'string') ? rawB.trim().toUpperCase() : rawB;
+
+      const aIsDNF = resA === 'DNF';
+      const bIsDNF = resB === 'DNF';
+
+      if (!aIsDNF && bIsDNF && typeof resA === 'number') {
+        aVenceu++;
+      } else if (aIsDNF && !bIsDNF && typeof resB === 'number') {
+        bVenceu++;
+      } else if (!aIsDNF && !bIsDNF && typeof resA === 'number' && typeof resB === 'number') {
+        if (resA < resB) aVenceu++;
+        else bVenceu++;
+      }
+    }
+
+    const card = document.createElement("div");
+    card.className = "headtohead-card";
+
+    const isAEmpate = aVenceu === bVenceu;
+    const destaqueA = aVenceu > bVenceu ? 'style="color: #90ee90;"' : '';
+    const destaqueB = bVenceu > aVenceu ? 'style="color: #90ee90;"' : '';
+
+    card.innerHTML = `
+  <div class="h2h-matchup" style='margin: 0px 85px 0px 25px; '>
+    <img class="team-logo" src="logos/${a.equipe}.png" alt="Logo ${a.equipe}" style="width: 80px; margin-right: 12px; filter: drop-shadow(0 0 4px #${a.teamcolor});">
+
+    <div class="h2h-piloto" style="display: flex; justify-content: flex-end; align-items: center; flex: 1;">
+      <span class="piloto-nome">${a.nome}</span>
+      <img class="flag-h2h" src="https://flagcdn.com/w40/${a.country}.png" alt="Bandeira ${a.country}">
+    </div>
+
+    <div class="h2h-score" style='margin: 25px'>
+      <span ${destaqueA}>${aVenceu}</span>
+      <span class="x">x</span>
+      <span ${destaqueB}>${bVenceu}</span>
+    </div> 
+    
+    <div class="h2h-piloto" style="display: flex; justify-content: flex-start; align-items: center; flex: 1;">
+      <img class="flag-h2h" src="https://flagcdn.com/w40/${b.country}.png" alt="Bandeira ${b.country}">
+      <span class="piloto-nome">${b.nome}</span>
+    </div>
+  </div>
+`;
+
+
+
+
+    container.appendChild(card);
+
+    const containerCompacto = document.querySelector("#headToHeadCompacto");
+if (containerCompacto) {
+  // Exemplo simples compacto: linha com nomes e placares
+  const compactoHTML = `
+  <div class="h2h-matchup compacto" style="
+    margin-top: 4px; 
+    font-size: 10px; 
+    align-items: center; 
+    display: flex; 
+    background-color: #111; 
+    padding: 6px 0px 6px 0px; 
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(175, 5, 5, 0.19);
+  ">
+    <img class="team-logo" src="logos/${a.equipe}.png" alt="Logo ${a.equipe}" style="width: 20px; margin: 0px 0px 0px 8px; filter: drop-shadow(0 0 3px #${a.teamcolor});">
+
+    <div class="h2h-piloto" style="display: flex; justify-content: flex-end; align-items: center; flex: 1; gap: 4px;">
+      <span class="piloto-nome" style="font-size: 10px; white-space: nowrap;">${a.nome}</span>
+      <img class="flag-h2h" src="https://flagcdn.com/w40/${a.country}.png" alt="Bandeira ${a.country}" style="width: 18px; height: auto;">
+    </div>
+
+    <div class="h2h-score-mobile" style="margin: 0 8px; white-space: nowrap;">
+      <span ${destaqueA} style="font-weight: 700; font-size: 10px;">${aVenceu}</span>
+      <span class="x" style="margin: 0 6px; font-weight: 700; font-size: 10px;">x</span>
+      <span ${destaqueB} style="font-weight: 700; font-size: 10px;">${bVenceu}</span>
+    </div> 
+    
+    <div class="h2h-piloto" style="display: flex; justify-content: flex-start; align-items: center; flex: 1; gap: 4px;">
+      <img class="flag-h2h" src="https://flagcdn.com/w40/${b.country}.png" alt="Bandeira ${b.country}" style="width: 18px; height: auto;">
+      <span class="piloto-nome" style="font-size: 10px; white-space: nowrap;">${b.nome}</span>
+    </div>
+  </div>
+`;
+
+containerCompacto.insertAdjacentHTML('beforeend', compactoHTML);
+}
+
+  }
+}
+montarTabelaHeadToHead();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// BOTÃO SWITCH
+document.addEventListener('DOMContentLoaded', function() {
+    const tabDrivers = document.getElementById('tabDrivers');
+    const tabConstructors = document.getElementById('tabConstructors');
+    const wikiTable = document.getElementById('wikipediaStyleTable');
+    const equipesTable = document.getElementById('tabelaEquipes');
+
+    
+
+    // Inicialmente esconde a tabela de construtores
+    equipesTable.style.display = 'none';
+
+    tabDrivers.addEventListener('click', function() {
+        this.classList.add('active');
+        tabConstructors.classList.remove('active');
+        wikiTable.style.display = 'table';
+        equipesTable.style.display = 'none';
+    });
+
+    tabConstructors.addEventListener('click', function() {
+        this.classList.add('active');
+        tabDrivers.classList.remove('active');
+        wikiTable.style.display = 'none';
+        equipesTable.style.display = 'table';
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// BOTÃO SWITCH MOBILE
+document.addEventListener('DOMContentLoaded', function() {
+    const tabDrivers = document.getElementById('tabDriversMobile');
+    const tabConstructors = document.getElementById('tabConstructorsMobile');
+    const wikiTable = document.getElementById('tableCompacta');
+    const equipesTable = document.getElementById('tabelaEquipesCompacta');
+
+    
+
+    // Inicialmente esconde a tabela de construtores
+    equipesTable.style.display = 'none';
+
+    tabDrivers.addEventListener('click', function() {
+        this.classList.add('active');
+        tabConstructors.classList.remove('active');
+        wikiTable.style.display = 'table';
+        equipesTable.style.display = 'none';
+    });
+
+    tabConstructors.addEventListener('click', function() {
+        this.classList.add('active');
+        tabDrivers.classList.remove('active');
+        wikiTable.style.display = 'none';
+        equipesTable.style.display = 'table';
+    });
+});
+
+
+
+
+
